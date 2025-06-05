@@ -760,7 +760,8 @@ body._locked {
 
 .popup {
   position: fixed;
-  inset: 0;
+  width: 100%;
+  min-height: 100vh;
   padding: 0.3125rem 0.625rem;
   pointer-events: none;
   transform-origin: center bottom;
@@ -1058,6 +1059,11 @@ body._locked {
   margin-top: 1.25rem;
 }
 
+.popup-menu {
+  padding: 0;
+  height: 100vh;
+  max-height: 100vh;
+}
 .popup-menu__wrapper {
   height: 100%;
   max-height: 100%;
@@ -1073,6 +1079,9 @@ body._locked {
   .popup-menu__body {
     max-width: 100%;
   }
+}
+.popup-menu__content {
+  height: 100%;
 }
 .popup-menu__slider {
   max-height: 100%;

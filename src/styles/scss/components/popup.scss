@@ -1,6 +1,7 @@
 .popup {
 	position: fixed;
-	inset: 0;
+	width: 100%;
+	min-height: 100vh;
 	padding: toRem(5) toRem(10);
 	pointer-events: none;
 	transform-origin: center bottom;
@@ -184,6 +185,10 @@
 }
 
 .popup-menu {
+	padding: 0;
+	height: 100vh;
+	max-height: 100vh;
+
 	&__wrapper {
 		height: 100%;
 		max-height: 100%;
@@ -202,7 +207,7 @@
 	}
 
 	&__content {
-
+		height: 100%;
 	}
 
 	&__slider {
