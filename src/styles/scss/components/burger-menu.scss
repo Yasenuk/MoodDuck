@@ -1,0 +1,123 @@
+.menu {
+	&__body {
+		display: flex;
+
+		@media (max-width: $mobile) {
+			[data-burger] & {
+				background: $mainColor;
+				display: block;
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: -100%;
+				overflow: auto;
+				padding: toRem(150) toRem(15) toRem(15) toRem(30);
+				transition: left 0.3s;
+
+				// &::before {
+				// 	content: "";
+				// 	filter: blur(5px);
+				// 	position: fixed;
+				// 	width: 100%;
+				// 	max-width: 100%;
+				// 	height: toRem(130);
+				// 	left: -100%;
+				// 	top: 0;
+				// 	transition: left 0.3s;
+				// 	z-index: 2;
+				// }
+			}
+			._open & {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+
+	// .menu__list
+	&__list {
+		
+	}
+
+	// .menu__item
+	&__item {
+	}
+
+	// .menu__link
+	&__link {
+		color: inherit;
+
+		@media (max-width: $mobile) {
+		}
+	}
+
+	// Close Button
+	&__close-button {
+		width: toRem(40);
+		aspect-ratio: 1 / 1;
+
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		background: none;
+		position: relative;
+		order: 2;
+		z-index: 2;
+		cursor: default;
+
+		@media (max-width: $mobile) {
+			display: flex;
+		}
+
+		span {
+			transition: margin-block 0.3s, opacity 0.3s 0.3s, background-color 0.3s;
+			margin-block: toRem(10);
+		}
+
+		&::before,
+		&::after,
+		span {
+			display: block;
+			background-color: $mainColorLight;
+			width: 100%;
+			height: toRem(4);
+			border-radius: 2px;
+			cursor: pointer;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			transition: rotate 0.3s, translate 0.3s 0.15s, background-color 0.3s;
+			transform-origin: center;
+		}
+
+		._open & {
+			span {
+				transition: margin-block 0.3s, opacity 0.3s, background-color 0.3s;
+				opacity: 0;
+				margin-block: 0;
+			}
+
+			&::before,
+			&::after {
+				transition: rotate 0.3s 0.15s, translate 0.3s, background-color 0.3s;
+			}
+
+			&::after {
+				rotate: 45deg;
+				translate: 0 -100%;
+			}
+
+			&::before {
+				rotate: -45deg;
+				translate: 0 100%;
+			}
+		}
+	}
+}

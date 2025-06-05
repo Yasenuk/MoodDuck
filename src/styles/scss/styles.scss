@@ -1,0 +1,175 @@
+@use "sass:math";
+
+@import "base/mixines";
+
+// Локальні шрифти
+@import "base/fonts";
+
+// Іконочний шрифт
+@import "base/icons";
+
+// ########### Option ################
+
+$headingFont: "Bebas Neue Cyrillic";
+$fontFamily: "Gilroy";
+
+$fontSize: toRem(18); // Розмір шрифту сторінки
+
+@import "base/color-palette";
+// Основні кольори
+$mainColor: var(--text-color-dark); // Колір шрифту за замовчуванням
+$mainColorLight: var(
+	--text-color-light
+); // Колір (бsілий) шрифту за замовчуванням
+$accentColor: var(--accent-color);
+$buttonColor: var(--button-color);
+$buttonColorHover: var(--button-color-hover);
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+
+// Ширина полотна (макету)
+$maxWidth: 1440;
+
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1312;
+
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 24;
+
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поїнти
+$p-tablet: 991.98; // Планшети, деякі телефони в горизонтальному положенні
+$p-mobile: 767.98; // Телефони L
+$p-mobileSmall: 479.98; // Телефони S
+
+$pc: toEm(
+	$containerWidth
+); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$tablet: toEm(
+	$p-tablet
+); // Планшети, деякі телефони в горизонтальному положенні
+$mobile: toEm($p-mobile); // Телефони L
+$mobileSmall: toEm($p-mobileSmall); // Телефони S
+
+// ###################################
+
+// ########### Main ################
+
+@import "base/null";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	@media (max-width: $mobile) {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+	&._locked {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+
+	// Сайт завантажений
+	&._loaded {
+	}
+
+	// &::before,
+	// &::after {
+	// 	content: "";
+	// 	position: fixed;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	width: 20vw;
+	// 	pointer-events: none;
+	// 	z-index: 999;
+	// 	background: red;
+	// }
+
+	// &::before {
+	// 	right: 0;
+	// 	// background: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent);
+	// }
+
+	// &::after {
+	// 	left: 0;
+	// 	// background: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent);
+	// }
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	position: relative;
+
+	@supports (overflow: clip) {
+		overflow: clip;
+	}
+	// Притискаємо footer
+	> main {
+		flex: 1 1 auto;
+	}
+	// Фікс для слайдерів
+	> * {
+		min-width: 0;
+	}
+}
+
+// Контейнер
+
+[class*="container"] {
+	margin: 0 auto;
+
+	@if ($maxWidthContainer> 0) {
+		max-width: toRem($containerWidth);
+	} @else {
+		@if ($containerPadding> 0) {
+			padding-inline: toRem(math.div($containerPadding, 2));
+		}
+	}
+
+	@media (max-width: $pc) {
+		max-width: toRem(1240);
+
+		@if ($containerPadding > 0 and $maxWidthContainer > 0) {
+			padding-inline: toRem(24);
+		}
+	}
+
+	@media (max-width: $tablet) {
+		max-width: toRem(820);
+
+		@if ($containerPadding > 0 and $maxWidthContainer > 0) {
+			padding-inline: toRem(16);
+		}
+	}
+
+	@media (max-width: $mobile) {
+		max-width: none;
+
+		@if ($containerPadding > 0 and $maxWidthContainer > 0) {
+			padding-inline: toRem(8);
+		}
+	}
+}
+
+// #################################
+
+@import "base";
+
+@import "common/common";
+
+@import "common/header";
+@import "common/footer";
+
+@import "common/page";

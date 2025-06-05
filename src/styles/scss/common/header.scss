@@ -1,0 +1,164 @@
+.header {
+	z-index: 100;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	// background: #00000088;
+
+	&__container {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		@include adaptiveValue(margin-top, 64, 30);
+		// @include adaptiveValue(margin-bottom, 60, 30);
+	}
+
+	&__logo {
+		@include adaptiveValue(width, 117, 70);
+		@include adaptiveValue(min-width, 117, 70);
+		transform-origin: center bottom;
+		transform: translateX(-200%);
+
+		._watched & {
+			transition: transform 0.8s cubic-bezier(0.51, 0.38, 0.62, 1.49) 0.4s;
+			transform: translateX(0);
+		}
+
+		img {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+
+	&__menu {
+		flex: 1 1 100%;
+		display: flex;
+		justify-content: end;
+	}
+
+	._open + &__logo {
+		opacity: 0;
+		animation: swipe-logo 1s cubic-bezier(0.51, 0.38, 0.62, 1.49) 0.5s 1 forwards;
+		
+		@keyframes swipe-logo {
+			0% {
+				opacity: 0;
+			}
+			to {
+				z-index: 3;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.menu {
+	[data-vis] {
+		display: none;
+
+		@media (max-width: $mobile) {
+			display: flex;
+		}
+	}
+
+	&__body {
+		flex: 1 1 100%;
+		display: flex;
+		justify-content: space-between;
+		color: $mainColorLight;
+	}
+
+	&__links {
+		flex: 1 1 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptiveValue(margin-inline, 20, 15, 0, $maxWidth, $p-tablet);
+
+		@media (max-width: toRem(1200)) {
+			align-items: stretch;
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		row-gap: toRem(15);
+
+		&_links {
+			flex: 1 1 100%;
+			justify-content: center;
+
+			@include adaptiveValue(column-gap, 24, 10, 0, $maxWidth, $p-tablet);
+
+			@media (max-width: toRem(1200)) {
+				max-width: toRem(540);
+				flex-wrap: wrap;
+			}
+		}
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+
+	&__social {
+		column-gap: toRem(8);
+	}
+
+	&__item {
+		transform: translateY(-150%);
+		opacity: 0;
+
+		._watched & {
+			@for $i from 1 through 7 {
+				&:nth-child(#{$i}) {
+					transition-delay: 0.6s + $i * 0.1s;
+				}
+			}
+
+			transition: transform 0.8s cubic-bezier(0.51, 0.38, 0.62, 1.49),
+				opacity 0.8s cubic-bezier(0.51, 0.38, 0.62, 1.49);
+
+			transform: translateY(0);
+			opacity: 1;
+		}
+
+		&_ico {
+			@include adaptiveValue(font-size, 40, 30);
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-weight: 500;
+		white-space: nowrap;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $accentColor;
+			}
+		}
+	}
+
+	&__section {
+		display: flex;
+		align-items: center;
+
+		@media (max-width: $mobile) {
+			flex-direction: column;
+
+			@include adaptiveValue(margin-top, 40, 30, 0, $p-mobile, $minWidth);
+		}
+	}
+
+	&__title {
+		text-align: center;
+		font-weight: 600;
+		margin-bottom: toRem(16);
+	}
+}
