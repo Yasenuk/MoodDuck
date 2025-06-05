@@ -19,10 +19,14 @@
 		@include adaptiveValue(min-width, 117, 70);
 		transform-origin: center bottom;
 		transform: translateX(-200%);
+		opacity: 0;
 
 		._watched & {
-			transition: transform 0.8s cubic-bezier(0.51, 0.38, 0.62, 1.49) 0.4s;
+			transition: transform 0.8s cubic-bezier(0.51, 0.38, 0.62, 1.49) 0.4s,
+			opacity 0.8s ease-out 0.6s;
 			transform: translateX(0);
+			
+			opacity: 1;
 		}
 
 		img {
@@ -127,6 +131,7 @@
 
 		&_ico {
 			@include adaptiveValue(font-size, 40, 30);
+			margin-right: toRem(4);
 		}
 	}
 

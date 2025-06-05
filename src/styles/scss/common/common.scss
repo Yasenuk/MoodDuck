@@ -15,7 +15,7 @@
 		margin-bottom: toRem(2);
 	}
 
-	@media (max-width:$mobile){
+	@media (max-width: $mobile) {
 		display: block;
 	}
 }
@@ -33,8 +33,9 @@
 	justify-content: center;
 	position: relative;
 
-	&::before,&::after{
-		content:'';
+	&::before,
+	&::after {
+		content: "";
 		position: absolute;
 		border-radius: 50%;
 		background: $buttonColorHover;
@@ -181,6 +182,10 @@
 				display: block;
 			}
 		}
+
+		@media (max-width: $mobile) {
+			font-size: toRem(15);
+		}
 	}
 }
 
@@ -202,14 +207,16 @@
 		overflow: hidden;
 		border-radius: toRem(10);
 		position: relative;
-		// background: rgba(17, 17, 17, 1);
-		background: url(../../images/alternative/noise.png) no-repeat center / cover;
+
+		.no-webp {
+			background: url(../../images/alternative/noise.png) no-repeat center /
+				cover;
+		}
 
 		.webp & {
 			background: url(../../images/alternative/noise.webp) no-repeat center /
 				cover;
 		}
-		// padding: toRem(3);
 
 		picture {
 			width: 100%;
@@ -222,20 +229,73 @@
 		}
 
 		&_info {
-			display: none;
+			position: absolute;
+			inset: 0;
+			transform-origin: right bottom;
+			transform: scale(0);
+			transition: transform 0.3s;
+			padding: toRem(10);
+			@include adaptiveValue("font-size", 16, 14, 0, $containerWidth, $p-mobile);
+			line-height: toRem(18);
+			background: rgba(0, 0, 0, 0.9);
+
+			@media (max-width:$mobile){
+				padding: toRem(16);
+			}
+
+			&:hover {
+				transform: scale(1);
+				transition: transform 0.3s ease-in-out 0.2s;
+			}
 		}
 
-		&_button {
-			display: none;
+		&_buttons {
 			position: absolute;
+			width: toRem(40);
+			height: toRem(40);
+			z-index: 3;
 			bottom: 0;
 			right: 0;
+
+			@media (any-hover: hover){
+				&:hover{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		
+		&_button {
+			position: absolute;
+			font-size: toRem(40);
+			bottom: toRem(5);
+			right: toRem(5);
+			transition: transform 0.3s ease-in-out 0.2s;
+		}
+
+		@media (any-hover: hover) {
+			&_buttons:hover ~ &_info {
+				transform: scale(1);
+				transition: transform 0.3s;
+			}
+
+			&_buttons:hover &_button-info {
+				transform: translateY(150%);
+				transition: transform 0.3s;
+			}
+
+			&_buttons:hover &_button-close {
+				transform: translateY(0);
+				transition: transform 0.3s;
+			}
 		}
 
 		&_button-info {
+			transform: translateY(0);
 		}
 
 		&_button-close {
+			transform: translateY(150%);
 		}
 	}
 

@@ -238,11 +238,12 @@
 		max-width: toRem(330);
 
 		@media (max-width: $tablet) {
-			max-width: toRem(400);
+			max-width: toRem(420);
 		}
 
 		@media (max-width: $mobile) {
-			max-width: toRem(316);
+			max-width: toRem(390);
+			width: 100%;
 		}
 	}
 
