@@ -15,6 +15,14 @@
 		._watched & {
 			animation: cube-pop-rotate 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 0.9s;
 		}
+
+		._end & {
+			animation: none;
+		}
+
+		&.animated {
+			animation: cube-pop-rotate 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+		}
 		
 		@keyframes cube-pop-rotate {
 			0% {
@@ -30,7 +38,6 @@
 				transform: rotateX(-35deg) rotateY(45deg) translateY(0);
 			}
 		}
-		
 	}
 }
 

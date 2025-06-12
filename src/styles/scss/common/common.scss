@@ -190,16 +190,12 @@
 }
 
 .product-card {
-	flex: 1 1 auto;
+	width: 100%;
+	@include adaptiveValue(max-width, 322, 316, 0, $containerWidth, $minWidth);
 	@include adaptiveValue(height, 410, 400);
 	padding: toRem(10);
 	background-color: $mainColorLight;
 	border-radius: toRem(20);
-
-	@media (max-width: $tablet) {
-		width: 100%;
-		max-width: 100%;
-	}
 
 	&__picture {
 		width: 100%;
@@ -238,9 +234,15 @@
 			@include adaptiveValue("font-size", 16, 14, 0, $containerWidth, $p-mobile);
 			line-height: toRem(18);
 			background: rgba(0, 0, 0, 0.9);
+			padding-bottom: toRem(50);
+
+			@media (max-width:$tablet){
+				font-size: toRem(14);
+			}
 
 			@media (max-width:$mobile){
 				padding: toRem(16);
+				font-size: toRem(18);
 			}
 
 			&:hover {
@@ -269,7 +271,7 @@
 			position: absolute;
 			font-size: toRem(40);
 			bottom: toRem(5);
-			right: toRem(5);
+			right: toRem(10);
 			transition: transform 0.3s ease-in-out 0.2s;
 		}
 

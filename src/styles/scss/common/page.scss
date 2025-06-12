@@ -1,4 +1,5 @@
 .main {
+	position: relative;
 	// background: $mainColor;
 
 	&__bg {
@@ -23,12 +24,13 @@
 		}
 
 		&_graffities {
+			display: flex;
+			flex-direction: column-reverse;
 		}
 	}
 
 	&__bg-picture {
 		display: block;
-		height: 100%;
 
 		img {
 			width: 100%;
@@ -47,9 +49,21 @@
 
 	&__bg-picture-light {
 		position: absolute;
+		translate: 0 -50%;
+		z-index: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center bottom;
+			user-select: none;
+			pointer-events: none;
+		}
 	}
 
 	&__bg-picture-graffiti {
+		height: 100%;
 		opacity: 0.2;
 		mix-blend-mode: darken;
 	}
@@ -60,42 +74,26 @@
 
 	&__hero {
 		&_light {
-			@include adaptiveValue(width, 2197, 1202);
-			@include adaptiveValue(height, 2191, 1198);
-			top: 0;
-			left: 50%;
-			translate: 0 -70%;
-
-			@media (max-width: $tablet) {
-				left: 45%;
-			}
+			@include adaptiveValue(width, 719, 250);
+			@include adaptiveValue(height, 644, 523);
+			right: 0;
+			translate: 0 0;
 		}
 	}
 
-	&__gallery-flavours {
+	&__gallery {
 		&_light {
-			@include adaptiveValue(width, 2079, 959);
-			@include adaptiveValue(height, 2073, 954);
-			top: 100%;
-			left: 50%;
-			translate: -120% 0;
-
-			@media (max-width: $tablet) {
-				left: 40%;
-			}
+			@include adaptiveValue(width, 445, 267);
+			@include adaptiveValue(height, 2073, 1401);
+			left: 0;
 		}
-	}
-
-	&__gallery-merch {
 	}
 
 	&__about {
 		&_light {
-			@include adaptiveValue(width, 2079, 959);
-			@include adaptiveValue(height, 2073, 954);
-			top: 100%;
+			@include adaptiveValue(width, 362, 266);
+			@include adaptiveValue(height, 1757, 1401);
 			right: 0;
-			translate: 85% -75%;
 		}
 	}
 
@@ -103,18 +101,51 @@
 	}
 
 	&__flavours-info {
+		&_light {
+			@include adaptiveValue(width, 347, 340);
+			@include adaptiveValue(height, 1757, 1401);
+			left: 0;
+		}
 	}
 
 	&__price-policy {
 	}
 
 	&__resources-library {
+		&_light {
+			@include adaptiveValue(width, 734, 340);
+			@include adaptiveValue(height, 756, 394);
+			right: 0;
+			translate: 45% -50%;
+
+			@media (max-width:$tablet){
+				left: 50%;
+				translate: -52% -40%;
+			}
+
+			@media (max-width: toRem(961)){
+				translate: -52% -35%;
+			}
+
+			@media (max-width:$mobile){
+				translate: -52% -25%;
+			}
+
+			@media (max-width:$mobileSmall){
+				translate: -52% -5%;
+			}
+		}
 	}
 
 	&__reviews {
 	}
 
 	&__contacts {
+		&_light {
+			@include adaptiveValue(width, 283, 153);
+			@include adaptiveValue(height, 1208, 834);
+			right: 0;
+		}
 	}
 
 	&__page-404 {

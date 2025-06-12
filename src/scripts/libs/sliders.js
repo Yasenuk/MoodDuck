@@ -34,7 +34,7 @@ function initSliders() {
 		new Swiper(".swiper-card", {
 			modules: [Navigation, Pagination],
 			grabCursor: true,
-			slidesPerView: 4,
+			slidesPerView: 1,
 			spaceBetween: 8,
 			speed: 800,
 
@@ -61,16 +61,13 @@ function initSliders() {
 			},
 
 			breakpoints: {
-				340: {
-					slidesPerView: 1,
-				},
-				480: {
+				540: {
 					slidesPerView: 2,
 				},
-				768: {
+				760: {
 					slidesPerView: 3,
 				},
-				992: {
+				1024: {
 					slidesPerView: 4,
 				},
 			}
@@ -84,13 +81,8 @@ function initSliders() {
 			slidesPerView: 2,
 			spaceBetween: 8,
 			speed: 800,
-			// centeredSlides: true,
 
-			//touchRatio: 0,
-			//simulateTouch: false,
-			// loop: true,
-
-			// loop: true,
+			loop: true,
 
 			preloadImages: false,
 			lazy: {
@@ -135,7 +127,6 @@ function initSliders() {
 			spaceBetween: 8,
 			speed: 800,
 			loop: true,
-			preloadImages: false,
 
 			lazy: {
 				loadPrevNext: true,

@@ -19,6 +19,9 @@ _Module.watcher.init();
 /* Модуль для роботи з попапами */
 _Module.popup.init();
 
+/* Модуль для роботи із світлом */
+_Module.light.init();
+
 /* Форматування чисел */
 // import wNumbMin from "./functions/wNumb.min.js";
 
@@ -26,10 +29,21 @@ _Module.popup.init();
 /* Робота зі слайдером */
 import "./libs/sliders.js";
 
-// const main = document.querySelector("main");
-// const main_bg = document.querySelector(".main__bg");
+/* Інше */
 
-// console.log(main.clientHeight, main_bg);
+const cube = document.getElementById("cube");
+if (cube) {
+	const sides = cube.children;
+	
+	for (const side of sides) {
+		side.addEventListener("click", e => {
+			if (!cube.classList.contains("animated")) {
+				cube.classList.add("animated");
 
-
-// main_bg.style.height = `${main.clientHeight}px`;
+				setTimeout(() => {
+					cube.classList.remove("animated");
+				}, 2500);
+			}
+		});
+	}
+}

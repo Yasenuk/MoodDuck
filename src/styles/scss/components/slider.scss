@@ -161,3 +161,10 @@
 		border: toRem(1) solid $mainColorLight;
 	}
 }
+
+.swiper-card {
+	.swiper-slide {
+		display: flex;
+		justify-content: center;
+	}
+}
