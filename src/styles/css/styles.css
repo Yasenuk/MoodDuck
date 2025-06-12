@@ -2740,6 +2740,9 @@ body._locked {
     max-width: 19.75rem;
   }
 }
+.gallery-merch__card .product-card__picture {
+  padding: 0.3125rem;
+}
 
 .about__subtitle {
   max-width: 20.625rem;

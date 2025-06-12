@@ -259,6 +259,12 @@
 			max-width: toRem(316);
 		}
 	}
+
+	&__card {
+		.product-card__picture {
+			padding: toRem(5);
+		}
+	}
 }
 
 .about {
