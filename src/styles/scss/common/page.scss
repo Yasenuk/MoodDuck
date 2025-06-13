@@ -195,6 +195,10 @@
 
 	&__slide {
 		@include adaptiveValue(height, 500, 490);
+
+		img {
+			width: 100%;
+		}
 	}
 
 	&__slider-button {

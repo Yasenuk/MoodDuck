@@ -2670,6 +2670,9 @@ body._locked {
     height: 30.625rem;
   }
 }
+.hero__slide img {
+  width: 100%;
+}
 .gallery-flavours__subtitle {
   max-width: 18rem;
   display: flex;

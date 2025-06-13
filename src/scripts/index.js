@@ -69,14 +69,14 @@ if (buttons && buttons.length != 0) {
 	});
 }
 
-const images = document.querySelectorAll("img");
-if (images && images.length != 0) {
-	images.forEach(image => {
-		window.addEventListener("resize", e => {
-			// image.setAttribute("width", image.clientWidth);
-			// image.setAttribute("height", image.clientHeight);
-			console.log(image.classList, image.offsetWidth);
-			
-		});
+const observer = new ResizeObserver(entries => {
+	entries.forEach(entry => {
+		const img = entry.target;
+		img.setAttribute("width", img.offsetWidth);
+		img.setAttribute("height", img.offsetHeight);
 	});
-}
+});
+
+document.querySelectorAll("img").forEach(img => {
+	observer.observe(img);
+});
