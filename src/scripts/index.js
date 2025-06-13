@@ -68,15 +68,3 @@ if (buttons && buttons.length != 0) {
 		});
 	});
 }
-
-const observer = new ResizeObserver(entries => {
-	entries.forEach(entry => {
-		const img = entry.target;
-		img.setAttribute("width", img.offsetWidth);
-		img.setAttribute("height", img.offsetHeight);
-	});
-});
-
-document.querySelectorAll("img").forEach(img => {
-	observer.observe(img);
-});
