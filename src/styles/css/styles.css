@@ -1413,12 +1413,7 @@ body._locked {
   position: relative;
   backface-visibility: hidden;
   transform-style: preserve-3d;
-}
-.product-card__picture .no-webp {
-  background: url(../../images/alternative/noise.png) no-repeat center/cover;
-}
-.webp .product-card__picture {
-  background: url(../../images/alternative/noise.webp) no-repeat center/cover;
+  background: var(--text-color-dark);
 }
 .product-card__picture_info {
   pointer-events: none;
@@ -1427,7 +1422,7 @@ body._locked {
   inset: 0;
   transform-origin: right bottom;
   transform: scale(0);
-  transition: transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
   padding: 0.625rem;
   line-height: 1.125rem;
   background: rgba(0, 0, 0, 0.9);
@@ -1470,7 +1465,7 @@ body._locked {
 ._open .product-card__picture_info {
   opacity: 1;
   transform: scale(1);
-  transition: transform 0.3s ease-in-out 0.2s;
+  transition: transform 0.3s ease-in-out;
 }
 .product-card__picture_buttons {
   position: absolute;
@@ -1561,6 +1556,7 @@ body._locked {
 .decorative-duck img {
   max-width: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -3568,6 +3564,28 @@ body._locked {
     width: 4.5rem;
   }
 }
+@media (min-width: 83.5em) {
+  .reviews__decorative-duck {
+    width: 8.75rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 83.5em) {
+  @supports (width: clamp( 5rem , 3.8188976378rem  +  5.905511811vw , 8.75rem )) {
+    .reviews__decorative-duck {
+      width: clamp( 5rem , 3.8188976378rem  +  5.905511811vw , 8.75rem );
+    }
+  }
+  @supports not (width: clamp( 5rem , 3.8188976378rem  +  5.905511811vw , 8.75rem )) {
+    .reviews__decorative-duck {
+      width: calc(5rem + 3.75 * (100vw - 20rem) / 63.5);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .reviews__decorative-duck {
+    width: 5rem;
+  }
+}
 @media (max-width: 75rem) {
   .reviews__decorative-duck {
     right: 50%;
@@ -3583,6 +3601,7 @@ body._locked {
 .reviews__decorative-duck img {
   max-width: 100%;
   width: 100%;
+  height: 100%;
 }
 ._watched .reviews__decorative-duck {
   transition: opacity 0.5s ease 0.3s;
