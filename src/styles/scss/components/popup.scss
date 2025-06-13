@@ -1,21 +1,20 @@
 .popup {
 	position: fixed;
-	width: 100%;
+	inset: 0;
 	min-height: 100vh;
 	padding: toRem(5) toRem(10);
 	pointer-events: none;
-	transform-origin: center bottom;
+	transform-origin: center;
+
 	transition: transform 0.3s ease 0.15s, scale 0.3s ease 0.5s,
 		backdrop-filter 1s ease-in-out;
+
 	transform: translateY(100%);
 	scale: 0;
 	z-index: 150;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+		overflow-y: auto;
 
 	&._open {
-		overflow: auto;
 		pointer-events: auto;
 		transition: transform 0.3s 0.05s, scale 0.3s ease 0.15s,
 			backdrop-filter 2.5s ease-in-out 0.1s;
@@ -27,10 +26,9 @@
 
 	&__wrapper {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
 		align-items: center;
-		width: 100%;
+		justify-content: center;
+		min-height: 100%;
 	}
 
 	&__body {
@@ -71,7 +69,7 @@
 		display: none;
 		z-index: 100;
 
-		@media (max-width: $mobile) {
+		@media (max-width: $pc) {
 			display: block;
 			font-size: toRem(40);
 			position: absolute;
@@ -81,9 +79,6 @@
 	}
 
 	&__content {
-		flex: 1 1 auto;
-		max-height: 100%;
-		height: 100%;
 	}
 
 	&__form {
@@ -185,20 +180,10 @@
 }
 
 .popup-menu {
-	padding: 0;
-	height: 100vh;
-	max-height: 100vh;
-
-	&__wrapper {
-		height: 100%;
-		max-height: 100%;
-	}
 
 	&__body {
 		background: none;
 		box-shadow: none;
-		max-height: 100%;
-		height: 100%;
 		max-width: 70%;
 
 		@media (max-width:$tablet){
@@ -219,20 +204,16 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		height: 100%;
-		max-height: 100%;
 	}
 
 	picture {
-		display: block;
-		height: 100%;
-		aspect-ratio: 9 / 13;
 	}
 
 	&__image {
 		width: 100%;
-		max-width: 100%;
 		height: 100%;
+		max-height: 80vh;
+		aspect-ratio: 9 / 13;
 		object-fit: contain;
 		object-position: center;
 	}

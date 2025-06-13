@@ -30,11 +30,6 @@ export class Ligth {
 				: 0
 			);
 
-			if (light.sub_parent) {
-				console.log([light.sub_parent]);
-				
-			}
-
 			light.el.style.top = `${offsetTop + offsetHeight}px`;
 			if (offsetX > 0) {
 				light.el.style.right = `${offsetX}px`;

@@ -1,9 +1,6 @@
-import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper.min.mjs";
-import {
-	Navigation,
-	Autoplay,
-	Pagination,
-} from "https://cdn.jsdelivr.net/npm/swiper@11/modules/index.min.mjs";
+import Swiper from "./swiper/swiper.min.mjs";
+import Navigation from "./swiper/modules/navigation.min.mjs";
+import Pagination from "./swiper/modules/pagination.min.mjs";
 
 function initSliders() {
 
@@ -137,10 +134,10 @@ function initSliders() {
 			freeMode: true,
 
 			breakpoints: {
-				320: {
+				340: {
 					slidesPerView: 1,
 				},
-				768: {
+				1024: {
 					slidesPerView: 2,
 				},
 			},

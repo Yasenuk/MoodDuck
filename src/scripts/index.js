@@ -47,3 +47,24 @@ if (cube) {
 		});
 	}
 }
+
+const buttons = document.querySelectorAll(".product-card__picture_buttons");
+if (buttons && buttons.length != 0) {
+	buttons.forEach(button => {
+		const card_picture = button.parentElement;
+		const card_info = card_picture.querySelector(".product-card__picture_info");
+		
+
+		button.addEventListener("click", e => {
+			card_picture.classList.toggle("_open");
+		});
+
+		card_info.addEventListener("click", e => {
+			card_picture.classList.add("_open");
+		});
+
+		card_picture.addEventListener("mouseleave", e => {
+			card_picture.classList.remove("_open");
+		});
+	});
+}
