@@ -239,6 +239,7 @@
 			line-height: toRem(18);
 			background: rgba(0, 0, 0, 0.9);
 			padding-bottom: toRem(50);
+			opacity: 0;
 
 			@media (max-width:$tablet){
 				font-size: toRem(14);
@@ -250,6 +251,7 @@
 			}
 
 			._open & {
+				opacity: 1;
 				transform: scale(1);
 				transition: transform 0.3s ease-in-out 0.2s;
 			}

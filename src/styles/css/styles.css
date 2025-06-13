@@ -1432,6 +1432,7 @@ body._locked {
   line-height: 1.125rem;
   background: rgba(0, 0, 0, 0.9);
   padding-bottom: 3.125rem;
+  opacity: 0;
 }
 @media (min-width: 83.5em) {
   .product-card__picture_info {
@@ -1467,6 +1468,7 @@ body._locked {
   }
 }
 ._open .product-card__picture_info {
+  opacity: 1;
   transform: scale(1);
   transition: transform 0.3s ease-in-out 0.2s;
 }
