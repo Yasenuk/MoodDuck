@@ -40,21 +40,6 @@
 		display: flex;
 		justify-content: end;
 	}
-
-	._open + &__logo {
-		opacity: 0;
-		animation: swipe-logo 1s cubic-bezier(0.51, 0.38, 0.62, 1.49) 0.5s 1 forwards;
-		
-		@keyframes swipe-logo {
-			0% {
-				opacity: 0;
-			}
-			to {
-				z-index: 3;
-				opacity: 1;
-			}
-		}
-	}
 }
 
 .menu {

@@ -5,6 +5,8 @@
 	&__bg {
 		position: absolute;
 		width: 100%;
+		max-width: $containerWidth;
+		margin: 0 auto;
 		top: 0;
 		z-index: -100;
 		pointer-events: none;
@@ -150,11 +152,12 @@
 
 	&__page-404 {
 		&_light {
-			@include adaptiveValue(width, 2197, 1202);
-			@include adaptiveValue(height, 2191, 1198);
-			top: 100%;
-			left: 50%;
-			translate: -85% 15%;
+			@include adaptiveValue(width, 719, 250);
+			@include adaptiveValue(height, 644, 523);
+			left: 0;
+			bottom: 0;
+			translate: 0 -100%;
+			scale: -1 -1;
 		}
 	}
 
@@ -263,6 +266,13 @@
 	&__card {
 		.product-card__picture {
 			padding: toRem(5);
+
+			.product-card__image {
+				height: 100%;
+				max-width: 100%;
+				object-fit: contain;
+				object-position: center;
+			}
 		}
 	}
 }

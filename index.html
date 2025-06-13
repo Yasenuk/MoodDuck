@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="./src/styles/css/styles.css" />
+	<link rel="preload" as="image" href="./src/images/banners/banner.webp" type="image/webp">
 	<title>MoodDuck Lab</title>
 </head>
 
@@ -15,30 +16,30 @@
 		<header class="header">
 			<section class="header__container" data-watch data-watch-margin="0px">
 				<nav class="header__menu menu" data-burger>
-					<button class="menu__close-button"><span></span></button>
+					<button class="menu__close-button" aria-label="Відкрити меню-бургер"><span></span></button>
 					<section class="menu__body">
 						<section class="menu__links">
 							<ul class="menu__list menu__list_links">
 								<li class="menu__item menu__item_links">
-									<a href="/" class="menu__link">Головна</a>
+									<a href="/" aria-label="Перейти на головну" aria-current="page" class="menu__link">Головна</a>
 								</li>
 								<li class="menu__item menu__item_links">
-									<a href="#gallery-flavours" class="menu__link">Галерея смаків</a>
+									<a href="#gallery-flavours" aria-label="Перейти до галереї смаків" aria-current="page" class="menu__link">Галерея смаків</a>
 								</li>
 								<li class="menu__item menu__item_links">
-									<a href="#gallery-merch" class="menu__link">Галерея мерчу</a>
+									<a href="#gallery-merch" aria-label="Перейти до галереї мерчу" aria-current="page" class="menu__link">Галерея мерчу</a>
 								</li>
 								<li class="menu__item menu__item_links">
-									<a href="#about" class="menu__link">Про нас</a>
+									<a href="#about" aria-label="Перейти до блоку 'Про Нас'" aria-current="page" class="menu__link">Про нас</a>
 								</li>
 								<li class="menu__item menu__item_links">
-									<a href="#resources-library" class="menu__link">Бібліотека матеріалів</a>
+									<a href="#resources-library" aria-label="Перейти до бібліотеки матеріалів" aria-current="page" class="menu__link">Бібліотека матеріалів</a>
 								</li>
 								<li class="menu__item menu__item_links">
-									<a href="#reviews" class="menu__link">Відгуки</a>
+									<a href="#reviews" aria-label="Переглянути відгуки" aria-current="page" class="menu__link">Відгуки</a>
 								</li>
 								<li class="menu__item menu__item_links">
-									<a href="#contacts" class="menu__link">Контакти</a>
+									<a href="#contacts" aria-label="Перейти до контактів" aria-current="page" class="menu__link">Контакти</a>
 								</li>
 							</ul>
 						</section>
@@ -46,13 +47,13 @@
 							<h3 class="menu__title">Для прямого зв’язку:</h3>
 							<ul class="menu__contacts menu__list">
 								<li class="menu__item">
-									<a target="_blank" href="mailto:moodduckofficial@gmail.com" class="menu__link">
-										<i class="icon-mail menu__item_ico"></i><span>moodduckofficial@gmail.com</span>
+									<a target="_blank" aria-label="Перейти до електронної адреси Mood Duck" href="mailto:moodduckofficial@gmail.com" class="menu__link">
+										<i aria-hidden="true" class="icon-mail menu__item_ico"></i><span>moodduckofficial@gmail.com</span>
 									</a>
 								</li>
 								<li class="menu__item">
-									<a target="_blank" href="https://t.me/MoodDuck_manager" class="menu__link">
-										<i class="icon-Instagram menu__item_ico"></i><span>Перейти до чату</span>
+									<a target="_blank" aria-label="Перейти до чату Mood Duck" href="https://t.me/MoodDuck_manager" class="menu__link">
+										<i aria-hidden="true" class="icon-Instagram menu__item_ico"></i><span>Перейти до чату</span>
 									</a>
 								</li>
 							</ul>
@@ -61,25 +62,25 @@
 							<h3 class="menu__title" data-vis>Соціальні мережі:</h3>
 							<ul class="menu__social menu__list">
 								<li class="menu__item menu__item_social">
-									<a target="_blank" href="https://t.me/moodducklab" class="menu__link">
-										<i class="icon-telegram menu__item_ico"></i><span data-vis>Telegram-канал</span>
+									<a target="_blank" aria-label="Перейти до Telegram-каналу" href="https://t.me/moodducklab" class="menu__link">
+										<i aria-hidden="true" class="icon-telegram menu__item_ico"></i><span data-vis>Telegram-канал</span>
 									</a>
 								</li>
 								<li class="menu__item menu__item_social">
-									<a target="_blank" href="https://www.instagram.com/moodduck_liquid?igsh=MTZ0aW5ldjVqcnNnZw==" class="menu__link">
-										<i class="icon-Instagram menu__item_ico"></i><span data-vis>Instagram</span>
+									<a target="_blank" aria-label="Перейти до Instagram" href="https://www.instagram.com/moodduck_liquid?igsh=MTZ0aW5ldjVqcnNnZw==" class="menu__link">
+										<i aria-hidden="true" class="icon-Instagram menu__item_ico"></i><span data-vis>Instagram</span>
 									</a>
 								</li>
 								<li class="menu__item menu__item_social">
-									<a target="_blank" href="https://vm.tiktok.com/ZMSJ863H1/" class="menu__link">
-										<i class="icon-tiktok menu__item_ico"></i><span data-vis>TikTok</span>
+									<a target="_blank" aria-label="Перейти до TikTok" href="https://vm.tiktok.com/ZMSJ863H1/" class="menu__link">
+										<i aria-hidden="true" class="icon-tiktok menu__item_ico"></i><span data-vis>TikTok</span>
 									</a>
 								</li>
 							</ul>
 						</section>
 					</section>
 				</nav>
-				<a href="/" class="header__logo"><img width="117" loading="eager" fetchpriority="high"
+				<a href="/" class="header__logo"><img width="117" height="88" loading="eager" fetchpriority="high"
 						src="./src/images/logo.svg" alt="Логотип MoodDuck"></a>
 			</section>
 		</header>
@@ -87,6 +88,10 @@
 		<main class="main">
 			<section class="main__bg">
 				<section class="main__bg-group main__bg-group_noises">
+					<picture class="main__bg-picture main__bg-picture-noise">
+						<source srcset="./src/images/alternative/noise.webp" type="image/webp" />
+						<img width="1440" height="1080" loading="lazy" src="./src/images/alternative/noise.png" alt="Шум" />
+					</picture>
 					<picture class="main__bg-picture main__bg-picture-noise">
 						<source srcset="./src/images/alternative/noise.webp" type="image/webp" />
 						<img width="1440" height="1080" loading="lazy" src="./src/images/alternative/noise.png" alt="Шум" />
@@ -237,11 +242,11 @@
 						</section>
 						<section class="hero__conrtol swiper-conrtol">
 							<section class="hero__slider-buttons swiper-buttons">
-								<button type="button" class="hero__slider-button hero__slider-button_prev swiper-button-prev">
-									<i class="icon-arrow"></i>
+								<button type="button" class="hero__slider-button hero__slider-button_prev swiper-button-prev" aria-label="До попереднього слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
 								</button>
-								<button type="button" class="hero__slider-button hero__slider-button_next swiper-button-next">
-									<i class="icon-arrow"></i>
+								<button type="button" class="hero__slider-button hero__slider-button_next swiper-button-next" aria-label="До наступного слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
 								</button>
 							</section>
 							<section class="hero__pagination swiper-pagination"></section>
@@ -273,17 +278,17 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/flavours/12ml_AppleMint.webp" type="image/webp" />
-											<img width="540" height="540" loading="lazy" src="./src/images/cards/flavours/12ml_AppleMint.png"
+											<img width="750" height="750" loading="lazy" fetchpriority="low" src="./src/images/cards/flavours/12ml_AppleMint.png"
 												alt="Ароматизатор MoodDuck 12мл Apple Mint" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -315,18 +320,18 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/flavours/12ml_BilberryIce.webp" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_BilberryIce.png"
 												alt="Ароматизатор MoodDuck 12мл Bilberry Ice" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -357,18 +362,18 @@
 											<source srcset="
 																./src/images/cards/flavours/12ml_BlueberryMenthol.webp
 															" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_BlueberryMenthol.png"
 												alt="Ароматизатор MoodDuck 12мл Blueberry Menthol" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -399,17 +404,17 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/flavours/12ml_CherryCola.webp" type="image/webp" />
-											<img width="540" height="540" loading="lazy" src="./src/images/cards/flavours/12ml_CherryCola.png"
+											<img width="750" height="750" loading="lazy" fetchpriority="low" src="./src/images/cards/flavours/12ml_CherryCola.png"
 												alt="Ароматизатор MoodDuck 12мл Cherry Cola" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -439,18 +444,18 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/flavours/12ml_CherryMentol.webp" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_CherryMentol.png"
 												alt="Ароматизатор MoodDuck 12мл Cherry Mentol" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -480,17 +485,17 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/flavours/12ml_ChillPeach.webp" type="image/webp" />
-											<img width="540" height="540" loading="lazy" src="./src/images/cards/flavours/12ml_ChillPeach.png"
+											<img width="750" height="750" loading="lazy" fetchpriority="low" src="./src/images/cards/flavours/12ml_ChillPeach.png"
 												alt="Ароматизатор MoodDuck 12мл Chill Peach" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -522,18 +527,18 @@
 											<source srcset="
 																./src/images/cards/flavours/12ml_CitrusParadise.webp
 															" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_CitrusParadise.png"
 												alt="Ароматизатор MoodDuck 12мл Citrus Paradise" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -563,17 +568,17 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/flavours/12ml_CoolMint.webp" type="image/webp" />
-											<img width="540" height="540" loading="lazy" src="./src/images/cards/flavours/12ml_CoolMint.png"
+											<img width="750" height="750" loading="lazy" fetchpriority="low" src="./src/images/cards/flavours/12ml_CoolMint.png"
 												alt="Ароматизатор MoodDuck 12мл Cool Mint" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -606,18 +611,18 @@
 											<source srcset="
 																./src/images/cards/flavours/12ml_CurrantMenthol.webp
 															" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_CurrantMenthol.png"
 												alt="Ароматизатор MoodDuck 12мл Currant Menthol" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -649,18 +654,18 @@
 											<source srcset="
 																./src/images/cards/flavours/12ml_DragonfruitIce.webp
 															" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_DragonfruitIce.png"
 												alt="Ароматизатор MoodDuck 12мл Dragonfruit Ice" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -691,18 +696,18 @@
 											<source srcset="
 																./src/images/cards/flavours/12ml_ForestBerries.webp
 															" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_ForestBerries.png"
 												alt="Ароматизатор MoodDuck 12мл Forest Berries" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -732,18 +737,18 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/flavours/12ml_GranatoRosso.webp" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_GranatoRosso.png"
 												alt="Ароматизатор MoodDuck 12мл Granato Rosso" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -773,17 +778,17 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/flavours/12ml_GrapeMint.webp" type="image/webp" />
-											<img width="540" height="540" loading="lazy" src="./src/images/cards/flavours/12ml_GrapeMint.png"
+											<img width="750" height="750" loading="lazy" fetchpriority="low" src="./src/images/cards/flavours/12ml_GrapeMint.png"
 												alt="Ароматизатор MoodDuck 12мл Grape Mint" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -813,17 +818,17 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/flavours/12ml_LemonMint.webp" type="image/webp" />
-											<img width="540" height="540" loading="lazy" src="./src/images/cards/flavours/12ml_LemonMint.png"
+											<img width="750" height="750" loading="lazy" fetchpriority="low" src="./src/images/cards/flavours/12ml_LemonMint.png"
 												alt="Ароматизатор MoodDuck 12мл Lemon Mint" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -853,18 +858,18 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/flavours/12ml_Mint_Gum.webp" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_Mint_Gum.png"
 												alt="Ароматизатор MoodDuck 12ml Mint Gum" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -896,18 +901,18 @@
 											<source srcset="
 																./src/images/cards/flavours/12ml_PineappleFrost.webp
 															" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_PineappleFrost.png"
 												alt="Ароматизатор MoodDuck 12мл Pineapple Frost" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -939,18 +944,18 @@
 											<source srcset="
 																./src/images/cards/flavours/12ml_RaspberryLemonade.webp
 															" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_RaspberryLemonade.png"
 												alt="Ароматизатор MoodDuck 12мл Raspberry Lemonade" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -979,18 +984,18 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/flavours/12ml_SourAppleIce.webp" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_SourAppleIce.png"
 												alt="Ароматизатор MoodDuck 12мл Sour Apple Ice" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1021,18 +1026,18 @@
 											<source srcset="
 																./src/images/cards/flavours/12ml_Strawberry_Energy.webp
 															" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_Strawberry_Energy.png"
 												alt="Ароматизатор MoodDuck 12мл Strawberry Energy" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1062,17 +1067,17 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/flavours/12ml_Tobacco.webp" type="image/webp" />
-											<img width="540" height="540" loading="lazy" src="./src/images/cards/flavours/12ml_Tobacco.png"
+											<img width="750" height="750" loading="lazy" fetchpriority="low" src="./src/images/cards/flavours/12ml_Tobacco.png"
 												alt="Ароматизатор MoodDuck 12мл Tobacco" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1104,18 +1109,18 @@
 											<source srcset="
 																./src/images/cards/flavours/12ml_WatermelonIce.webp
 															" type="image/webp" />
-											<img width="540" height="540" loading="lazy"
+											<img width="750" height="750" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/flavours/12ml_WatermelonIce.png"
 												alt="Ароматизатор MoodDuck 12мл Watermelon Ice" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1143,12 +1148,12 @@
 						<section class="gallery-flavours__conrtol swiper-conrtol" data-watch>
 							<section class="gallery-flavours__slider-buttons swiper-buttons">
 								<button type="button"
-									class="gallery-flavours__slider-button gallery-flavours__slider-button_prev swiper-button-prev">
-									<i class="icon-arrow"></i>
+									class="gallery-flavours__slider-button gallery-flavours__slider-button_prev swiper-button-prev" aria-label="До попереднього слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
 								</button>
 								<button type="button"
-									class="gallery-flavours__slider-button gallery-flavours__slider-button_next swiper-button-next">
-									<i class="icon-arrow"></i>
+									class="gallery-flavours__slider-button gallery-flavours__slider-button_next swiper-button-next" aria-label="До наступного слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
 								</button>
 							</section>
 							<section class="gallery-flavours__pagination swiper-pagination"></section>
@@ -1171,17 +1176,17 @@
 					<section class="gallery-merch__slider swiper swiper-card">
 						<section class="gallery-merch__wrapper swiper-wrapper">
 							<section class="gallery-merch__slide swiper-slide">
-								<section class="gallery-flavours__card product-card">
+								<section class="gallery-merch__card product-card">
 									<section class="product-card__picture">
-										<img height="250" loading="lazy" src="./src/images/cards/merch/strap.svg" alt="Ремінець для POD-систем" class="product-card__image" />
+										<img width="250" height="250" loading="lazy" fetchpriority="low" src="./src/images/cards/merch/strap.svg" alt="Ремінець для POD-систем" class="product-card__image" />
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1203,23 +1208,23 @@
 							</section>
 
 							<section class="gallery-merch__slide swiper-slide">
-								<section class="gallery-flavours__card product-card">
+								<section class="gallery-merch__card product-card">
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/merch/smellies/smelly_Blueberry_Mentol.webp"
 												type="image/webp" />
-											<img height="250" loading="lazy"
+											<img width="440" height="540" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/merch/smellies/smelly_Blueberry_Mentol.png"
 												alt="Пахучка в авто Blueberry Menthol" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1248,17 +1253,17 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/merch/smellies/smelly_Chill_Peach.webp" type="image/webp" />
-											<img height="250" loading="lazy" src="./src/images/cards/merch/smellies/smelly_Chill_Peach.webp"
+											<img width="358" height="540" loading="lazy" fetchpriority="low" src="./src/images/cards/merch/smellies/smelly_Chill_Peach.webp"
 												alt="Пахучка в авто Chill Peach" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1288,18 +1293,18 @@
 										<picture>
 											<source srcset="./src/images/cards/merch/smellies/smelly_Citrus_Paradise.webp"
 												type="image/webp" />
-											<img height="250" loading="lazy"
+											<img width="438" height="540" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/merch/smellies/smelly_Citrus_Paradise.png"
 												alt="Пахучка в авто Citrus Paradise" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1328,18 +1333,18 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/merch/smellies/smelly_Sour_Apple_Ice.webp" type="image/webp" />
-											<img height="250" loading="lazy"
+											<img width="338" height="540" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/merch/smellies/smelly_Sour_Apple_Ice.webp"
 												alt="Пахучка в авто Sour Apple Ice" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1369,18 +1374,18 @@
 										<picture>
 											<source srcset="./src/images/cards/merch/smellies/smelly_Strawberry_RedBull.webp"
 												type="image/webp" />
-											<img height="250" loading="lazy"
+											<img width="395" height="540" loading="lazy" fetchpriority="low"
 												src="./src/images/cards/merch/smellies/smelly_Strawberry_RedBull.png"
 												alt="Пахучка в авто Strawberry RedBull" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1409,17 +1414,17 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/merch/sticker_packs/sticker_pack_1.webp" type="image/webp" />
-											<img height="250" loading="lazy" src="./src/images/cards/merch/sticker_packs/sticker_pack_1.webp"
+											<img width="382" height="540" loading="lazy" fetchpriority="low" src="./src/images/cards/merch/sticker_packs/sticker_pack_1.webp"
 												alt="Набір наліпок від фірми Mood Duck" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1447,17 +1452,17 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/merch/sticker_packs/sticker_pack_2.webp" type="image/webp" />
-											<img height="250" loading="lazy" src="./src/images/cards/merch/sticker_packs/sticker_pack_1.png"
+											<img width="381" height="540" loading="lazy" fetchpriority="low" src="./src/images/cards/merch/sticker_packs/sticker_pack_1.png"
 												alt="Набір наліпок від фірми Mood Duck" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1485,17 +1490,17 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/merch/opener.webp" type="image/webp" />
-											<img height="250" loading="lazy" src="./src/images/cards/merch/opener.png"
+											<img width="250" height="250" loading="lazy" fetchpriority="low" src="./src/images/cards/merch/opener.png"
 												alt="Відкривачка наборів для самозамісу" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1523,17 +1528,17 @@
 									<section class="product-card__picture">
 										<picture>
 											<source srcset="./src/images/cards/merch/package.webp" type="image/webp" />
-											<img height="250" loading="lazy" src="./src/images/cards/merch/package.png"
+											<img width="432" height="540" loading="lazy" fetchpriority="low" src="./src/images/cards/merch/package.png"
 												alt="Фірмовий пакет Mood Duck" class="product-card__image" />
 										</picture>
 
 										<div class="product-card__picture_buttons">
 											<button class="product-card__picture_button product-card__picture_button-info">
-												<i class="icon-info"></i>
+												<i aria-hidden="true" class="icon-info"></i>
 											</button>
 											
 											<button class="product-card__picture_button product-card__picture_button-close">
-												<i class="icon-cross"></i>
+												<i aria-hidden="true" class="icon-cross"></i>
 											</button>
 										</div>
 
@@ -1556,12 +1561,12 @@
 						<section class="gallery-merch__conrtol swiper-conrtol">
 							<section class="gallery-merch__slider-buttons swiper-buttons">
 								<button type="button"
-									class="gallery-merch__slider-button gallery-merch__slider-button_prev swiper-button-prev">
-									<i class="icon-arrow"></i>
+									class="gallery-merch__slider-button gallery-merch__slider-button_prev swiper-button-prev" aria-label="До попереднього слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
 								</button>
 								<button type="button"
-									class="gallery-merch__slider-button gallery-merch__slider-button_next swiper-button-next">
-									<i class="icon-arrow"></i>
+									class="gallery-merch__slider-button gallery-merch__slider-button_next swiper-button-next" aria-label="До наступного слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
 								</button>
 							</section>
 							<section class="gallery-merch__pagination swiper-pagination"></section>
@@ -1619,7 +1624,7 @@
 							<div class="about__decorative-duck decorative-duck">
 								<picture>
 									<source srcset="./src/images/alternative/ducks/mafia-duck.webp" type="image/webp" />
-									<img loading="lazy" src="./src/images/alternative/ducks/mafia-duck.png"
+									<img width="100" height="155" loading="lazy" fetchpriority="low" src="./src/images/alternative/ducks/mafia-duck.png"
 										alt="екоративна качка мафіозі" />
 								</picture>
 							</div>
@@ -1630,17 +1635,17 @@
 										<picture>
 											<source srcset="./src/images/banners/banner.webp" type="image/webp" />
 											<img class="about__banner banner banner_right" width="1500" height="512"
-												src="./src/images/banners/banner.png" alt="Банер" loading="eager" fetchpriority="high" />
+												src="./src/images/banners/banner.png" alt="Банер" loading="lazy" fetchpriority="low" />
 										</picture>
 									</section>
 								</section>
 								<section class="about__conrtol swiper-conrtol swiper-conrtol_center">
 									<section class="about__slider-buttons swiper-buttons">
-										<button type="button" class="about__slider-button about__slider-button_prev swiper-button-prev">
-											<i class="icon-arrow"></i>
+										<button aria-label="До попереднього слайду" type="button" class="about__slider-button about__slider-button_prev swiper-button-prev">
+											<i aria-hidden="true" class="icon-arrow"></i>
 										</button>
-										<button type="button" class="about__slider-button about__slider-button_next swiper-button-next">
-											<i class="icon-arrow"></i>
+										<button aria-label="До наступного слайду" type="button" class="about__slider-button about__slider-button_next swiper-button-next">
+											<i aria-hidden="true" class="icon-arrow"></i>
 										</button>
 									</section>
 									<section class="about__pagination swiper-pagination"></section>
@@ -1770,7 +1775,7 @@
 								<figure>
 									<picture class="flavours-info__picture-set">
 										<source srcset="./src/images/cards/mint-flavour.webp" />
-										<img class="flavours-info__image" src="./src/images/cards/mint-flavour.png"
+										<img width="412" height="255" loading="lazy" fetchpriority="low" class="flavours-info__image" src="./src/images/cards/mint-flavour.png"
 											alt="М'ятні та ментольні смаки" />
 									</picture>
 									<figcaption class="flavours-info__picture-description">
@@ -1817,8 +1822,8 @@
 								</li>
 							</ul>
 
-							<button class="flavours-info__more-button button open-popup" data-popup-open="#popup-menu">
-								Дізнатися більше <i class="icon-arrow _rotate"></i>
+							<button aria-label="Відкрити попап з меню" class="flavours-info__more-button button open-popup" data-popup-open="#popup-menu">
+								Дізнатися більше <i aria-hidden="true" class="icon-arrow _rotate"></i>
 							</button>
 						</article>
 						<article class="flavours-info__card">
@@ -1826,7 +1831,7 @@
 								<figure>
 									<picture class="flavours-info__picture-set">
 										<source srcset="./src/images/cards/ice-flavour.webp" />
-										<img class="flavours-info__image" src="./src/images/cards/ice-flavour.png" alt="Смаки з холодком" />
+										<img width="412" height="255" loading="lazy" fetchpriority="low" class="flavours-info__image" src="./src/images/cards/ice-flavour.png" alt="Смаки з холодком" />
 									</picture>
 									<figcaption class="flavours-info__picture-description">
 										Смаки з холодком
@@ -1860,8 +1865,8 @@
 								</li>
 							</ul>
 
-							<button class="flavours-info__more-button button open-popup" data-popup-open="#popup-menu">
-								Дізнатися більше <i class="icon-arrow _rotate"></i>
+							<button aria-label="Відкрити попап з меню" class="flavours-info__more-button button open-popup" data-popup-open="#popup-menu">
+								Дізнатися більше <i aria-hidden="true" class="icon-arrow _rotate"></i>
 							</button>
 						</article>
 						<article class="flavours-info__card">
@@ -1869,8 +1874,8 @@
 								<figure>
 									<picture class="flavours-info__picture-set">
 										<source srcset="./src/images/cards/fruit-flavour.webp" type="image/webp" />
-										<img class="flavours-info__image" src="./src/images/cards/fruit-flavour.png"
-											alt="Топові фруктові та класичні смаки" loading="lazy" />
+										<img width="412" height="255" loading="lazy" fetchpriority="low" class="flavours-info__image" src="./src/images/cards/fruit-flavour.png"
+											alt="Топові фруктові та класичні смаки" />
 									</picture>
 									<figcaption class="flavours-info__picture-description">
 										Топові фруктові та класичні смаки
@@ -1905,8 +1910,8 @@
 								</li>
 							</ul>
 
-							<button class="flavours-info__more-button button open-popup" data-popup-open="#popup-menu">
-								Дізнатися більше <i class="icon-arrow _rotate"></i>
+							<button aria-label="Відкрити попап з меню" class="flavours-info__more-button button open-popup" data-popup-open="#popup-menu">
+								Дізнатися більше <i aria-hidden="true" class="icon-arrow _rotate"></i>
 							</button>
 						</article>
 					</section>
@@ -1926,7 +1931,7 @@
 						<div class="price-policy__decorative-duck decorative-duck">
 							<picture>
 								<source srcset="./src/images/alternative/ducks//duck-write.webp" type="image/webp" />
-								<img loading="lazy" src="./src/images/alternative/ducks/duck-write.png"
+								<img width="98" height="116" loading="lazy" fetchpriority="low" src="./src/images/alternative/ducks/duck-write.png"
 									alt="Декоративна качка з блокнотом" />
 							</picture>
 						</div>
@@ -1936,7 +1941,7 @@
 							<p class="price-policy__card-price">МРЦ - 150</p>
 						</section>
 						<section class="price-policy__card price-policy__card_light">
-							<img width="117" loading="lazy" src="./src/images/logo.svg" alt="Логотип MoodDuck" />
+							<img width="117" height="88" fetchpriority="low" loading="lazy" src="./src/images/logo.svg" alt="Логотип MoodDuck" />
 						</section>
 						<section class="price-policy__card">
 							<h3 class="price-policy__card-title">30 мл</h3>
@@ -1971,8 +1976,9 @@
 						</section>
 						<section class="resources-library__footer">
 							<a target="_blank"
+								 aria-label="Перейти до Google диску з матеріалами"
 								href="https://drive.google.com/drive/folders/1a73krjcY-SDCFqHxqOMaQnYhNxlkK3-6?usp=drive_link"
-								class="resources-library__button button">Завантажити матеріали <i class="icon-download"></i></a>
+								class="resources-library__button button">Завантажити матеріали <i aria-hidden="true" class="icon-download"></i></a>
 							<p class="resources-library__button-description">
 								Презентуй продукцію зручно та професійно.
 							</p>
@@ -1984,35 +1990,35 @@
 									<section class="cube__side cube__side_back">
 										<picture class="resources-library__picture-set">
 											<source srcset="./src/images/cube/front-side.webp" />
-											<img class="resources-library__image" src="./src/images/cube/front-side.png"
+											<img width="325" height="323" loading="lazy" fetchpriority="low" class="resources-library__image" src="./src/images/cube/front-side.png"
 												alt="Фронтальна сторона куба" />
 										</picture>
 									</section>
 									<section class="cube__side cube__side_front">
 										<picture class="resources-library__picture-set">
 											<source srcset="./src/images/cube/front-side.webp" />
-											<img class="resources-library__image" src="./src/images/cube/front-side.png"
+											<img width="325" height="323" loading="lazy" fetchpriority="low" class="resources-library__image" src="./src/images/cube/front-side.png"
 												alt="Фронтальна сторона куба" />
 										</picture>
 									</section>
 									<section class="cube__side cube__side_left">
 										<picture class="resources-library__picture-set">
 											<source srcset="./src/images/cube/left-side.webp" />
-											<img class="resources-library__image" src="./src/images/cube/left-side.png"
+											<img width="323" height="323" loading="lazy" fetchpriority="low" class="resources-library__image" src="./src/images/cube/left-side.png"
 												alt="Ліва сторона куба" />
 										</picture>
 									</section>
 									<section class="cube__side cube__side_right">
 										<picture class="resources-library__picture-set">
 											<source srcset="./src/images/cube/left-side.webp" />
-											<img class="resources-library__image" src="./src/images/cube/left-side.png"
+											<img width="323" height="323" loading="lazy" fetchpriority="low" class="resources-library__image" src="./src/images/cube/left-side.png"
 												alt="Ліва сторона куба" />
 										</picture>
 									</section>
 									<section class="cube__side cube__side_top">
 										<picture class="resources-library__picture-set">
 											<source srcset="./src/images/cube/top-side.webp" />
-											<img class="resources-library__image" src="./src/images/cube/top-side.png"
+											<img width="323" height="323" loading="lazy" fetchpriority="low" class="resources-library__image" src="./src/images/cube/top-side.png"
 												alt="Верхня сторона куба" />
 										</picture>
 									</section>
@@ -2033,7 +2039,7 @@
 						<div class="reviews__decorative-duck decorative-duck">
 							<picture>
 								<source srcset="./src/images/alternative/ducks/duck-watermelon-ice.webp" type="image/webp" />
-								<img loading="lazy" src="./src/images/alternative/ducks/duck-watermelon-ice.png" alt="Качка в кавуні" />
+								<img width="126" height="140" loading="lazy" fetchpriority="low" src="./src/images/alternative/ducks/duck-watermelon-ice.png" alt="Качка в кавуні" />
 							</picture>
 						</div>
 					</section>
@@ -2052,19 +2058,19 @@
 										</div>
 										<ul class="card-review__rating" aria-label="Рейтинг користувача">
 											<li class="card-review__rating-item card-review__rating-item_active">
-												<i class="icon-duck"></i>
+												<i aria-hidden="true" class="icon-duck"></i>
 											</li>
 											<li class="card-review__rating-item">
-												<i class="icon-duck"></i>
+												<i aria-hidden="true" class="icon-duck"></i>
 											</li>
 											<li class="card-review__rating-item">
-												<i class="icon-duck"></i>
+												<i aria-hidden="true" class="icon-duck"></i>
 											</li>
 											<li class="card-review__rating-item">
-												<i class="icon-duck"></i>
+												<i aria-hidden="true" class="icon-duck"></i>
 											</li>
 											<li class="card-review__rating-item">
-												<i class="icon-duck"></i>
+												<i aria-hidden="true" class="icon-duck"></i>
 											</li>
 										</ul>
 									</header>
@@ -2081,13 +2087,13 @@
 									<footer class="card-review__footer">
 										<section class="card-review__pluses">
 											<h3 class="card-review__group-title">
-												<i class="icon-plus"></i> Плюси:
+												<i aria-hidden="true" class="icon-plus"></i> Плюси:
 											</h3>
 											<ul class="card-review__list card-review__pluses-list"></ul>
 										</section>
 										<section class="card-review__minuses">
 											<h3 class="card-review__group-title">
-												<i class="icon-minus"></i> Мінуси:
+												<i aria-hidden="true" class="icon-minus"></i> Мінуси:
 											</h3>
 											<ul class="card-review__list card-review__minusess-list"></ul>
 										</section>
@@ -2098,18 +2104,18 @@
 						</section>
 						<section class="reviews__conrtol swiper-conrtol">
 							<section class="reviews__slider-buttons swiper-buttons">
-								<button type="button" class="reviews__slider-button reviews__slider-button_prev swiper-button-prev">
-									<i class="icon-arrow"></i>
+								<button type="button" class="reviews__slider-button reviews__slider-button_prev swiper-button-prev" aria-label="До попереднього слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
 								</button>
-								<button type="button" class="reviews__slider-button reviews__slider-button_next swiper-button-next">
-									<i class="icon-arrow"></i>
+								<button type="button" class="reviews__slider-button reviews__slider-button_next swiper-button-next" aria-label="До наступного слайду">
+									<i aria-hidden="true" class="icon-arrow"></i>
 								</button>
 							</section>
 							<section class="reviews__pagination swiper-pagination"></section>
 						</section>
 					</section>
-					<button class="reviews__button button open-popup" data-popup-open="#popup-review">
-						Залишити відгук <i class="icon-write"></i>
+					<button aria-label="Відкрити попап з формою для написання вдгуку" class="reviews__button button open-popup" data-popup-open="#popup-review">
+						Залишити відгук <i aria-hidden="true" class="icon-write"></i>
 					</button>
 				</section>
 			</section>
@@ -2127,13 +2133,13 @@
 							<h3 class="contacts__title">Для прямого зв’язку:</h3>
 							<ul class="contacts__list">
 								<li class="contacts__item">
-									<a href="mailto:moodduckofficial@gmail.com" class="contacts__link">
-										<i class="icon-mail"></i><span>moodduckofficial@gmail.com</span>
+									<a target="_blank" aria-label="Перейти до електронної адреси Mood Duck" href="mailto:moodduckofficial@gmail.com" class="contacts__link">
+										<i aria-hidden="true" class="icon-mail"></i><span>moodduckofficial@gmail.com</span>
 									</a>
 								</li>
 								<li class="contacts__item">
-									<a href="https://t.me/MoodDuck_manager" class="contacts__link">
-										<i class="icon-Instagram"></i><span>Перейти до чату</span>
+									<a target="_blank" aria-label="Перейти до чату Mood Duck" href="https://t.me/MoodDuck_manager" class="contacts__link">
+										<i aria-hidden="true" class="icon-Instagram"></i><span>Перейти до чату</span>
 									</a>
 								</li>
 							</ul>
@@ -2145,18 +2151,18 @@
 							<h3 class="contacts__title">Соціальні мережі:</h3>
 							<ul class="contacts__list">
 								<li class="contacts__item">
-									<a href="https://t.me/moodducklab" class="contacts__link">
-										<i class="icon-telegram"></i><span>Telegram-канал</span>
+									<a target="_blank" aria-label="Перейти до Telegram-каналу" href="https://t.me/moodducklab" class="contacts__link">
+										<i aria-hidden="true" class="icon-telegram"></i><span>Telegram-канал</span>
 									</a>
 								</li>
 								<li class="contacts__item">
-									<a href="https://www.instagram.com/moodduck_liquid?igsh=MTZ0aW5ldjVqcnNnZw==" class="contacts__link">
-										<i class="icon-Instagram"></i><span>Instagram</span>
+									<a target="_blank" aria-label="Перейти до Instagram" href="https://www.instagram.com/moodduck_liquid?igsh=MTZ0aW5ldjVqcnNnZw==" class="contacts__link">
+										<i aria-hidden="true" class="icon-Instagram"></i><span>Instagram</span>
 									</a>
 								</li>
 								<li class="contacts__item">
-									<a href="https://vm.tiktok.com/ZMSJ863H1/" class="contacts__link">
-										<i class="icon-tiktok"></i><span>TikTok</span>
+									<a target="_blank" aria-label="Перейти до TikTok" href="https://vm.tiktok.com/ZMSJ863H1/" class="contacts__link">
+										<i aria-hidden="true" class="icon-tiktok"></i><span>TikTok</span>
 									</a>
 								</li>
 							</ul>
@@ -2169,7 +2175,7 @@
 		<footer class="footer">
 			<section class="footer__container">
 				<section class="footer__logo" data-watch>
-					<img width="1323" height="auto" src="./src/images/footer-logo.svg" alt="Логотип MoodDuck в підвалі сайту"
+					<img width="1325" height="300" loading="lazy" fetchpriority="low" src="./src/images/footer-logo.svg" alt="Логотип MoodDuck в підвалі сайту"
 						class="footer__logo-image">
 				</section>
 
@@ -2177,25 +2183,25 @@
 					<section class="footer__conent" data-watch>
 						<ul class="footer__list">
 							<li class="footer__item">
-								<a href="/" class="footer__link">Головна</a>
+								<a href="/" aria-label="Перейти на головну" aria-current="page" class="footer__link">Головна</a>
 							</li>
 							<li class="footer__item">
-								<a href="#gallery-flavours" class="footer__link">Галерея смаків</a>
+								<a href="#gallery-flavours" aria-label="Перейти до галереї смаків" aria-current="page" class="footer__link">Галерея смаків</a>
 							</li>
 							<li class="footer__item">
-								<a href="#gallery-merch" class="footer__link">Галерея мерчу</a>
+								<a href="#gallery-merch" aria-label="Перейти до галереї мерчу" aria-current="page" class="footer__link">Галерея мерчу</a>
 							</li>
 							<li class="footer__item">
-								<a href="#about" class="footer__link">Про нас</a>
+								<a href="#about" aria-label="Перейти до блоку 'Про Нас'" aria-current="page" class="footer__link">Про нас</a>
 							</li>
 							<li class="footer__item">
-								<a href="#resources-library" class="footer__link">Бібліотека матеріалів</a>
+								<a href="#resources-library" aria-label="Перейти до бібліотеки матеріалів" aria-current="page" class="footer__link">Бібліотека матеріалів</a>
 							</li>
 							<li class="footer__item">
-								<a href="#reviews" class="footer__link">Відгуки</a>
+								<a href="#reviews" aria-label="Переглянути відгуки" aria-current="page" class="footer__link">Відгуки</a>
 							</li>
 							<li class="footer__item">
-								<a href="#contacts" class="footer__link">Контакти</a>
+								<a href="#contacts" aria-label="Перейти до контактів" aria-current="page" class="footer__link">Контакти</a>
 							</li>
 						</ul>
 						<p class="footer__paragraph footer__policy">Політика кофіденційності</p>
@@ -2209,7 +2215,7 @@
 				<section class="footer__decarative" data-watch>
 					<picture>
 						<source srcset="./src/images/alternative/ducks/duck-in-cloud.webp" type="image/webp">
-						<img src="./src/images/alternative/ducks/duck-in-cloud.png" alt="Качка на хмарі">
+						<img width="342" height="290" loading="lazy" fetchpriority="low" src="./src/images/alternative/ducks/duck-in-cloud.png" alt="Качка на хмарі">
 					</picture>
 				</section>
 			</section>
@@ -2221,7 +2227,7 @@
 					<header class="popup__header">
 						<h2 id="popup__title" class="popup__title">Залиште свій відгук про <span class="-nowrap">Mood Duck</span>
 						</h2>
-						<button data-popup-close type="button" class="popup__close"><i class="icon-cross"></i></button>
+						<button data-popup-close type="button" class="popup__close"><i aria-hidden="true" class="icon-cross"></i></button>
 					</header>
 					<section class="popup__content">
 						<form class="popup__form form-review" id="form-review" action="/send-review" method="POST">
@@ -2229,19 +2235,19 @@
 								<legend class="form-review__label">Оцініть продукт</legend>
 								<section class="form-review__rating">
 									<input type="radio" id="rating-5" name="rating" value="5">
-									<label for="rating-5" title="5 з 5"><i class="icon-duck"></i></label>
+									<label for="rating-5" title="5 з 5"><i aria-hidden="true" class="icon-duck"></i></label>
 
 									<input type="radio" id="rating-4" name="rating" value="4">
-									<label for="rating-4" title="4 з 5"><i class="icon-duck"></i></label>
+									<label for="rating-4" title="4 з 5"><i aria-hidden="true" class="icon-duck"></i></label>
 
 									<input type="radio" id="rating-3" name="rating" value="3">
-									<label for="rating-3" title="3 з 5"><i class="icon-duck"></i></label>
+									<label for="rating-3" title="3 з 5"><i aria-hidden="true" class="icon-duck"></i></label>
 
 									<input type="radio" id="rating-2" name="rating" value="2">
-									<label for="rating-2" title="2 з 5"><i class="icon-duck"></i></label>
+									<label for="rating-2" title="2 з 5"><i aria-hidden="true" class="icon-duck"></i></label>
 
 									<input type="radio" id="rating-1" name="rating" value="1">
-									<label for="rating-1" title="1 з 5"><i class="icon-duck"></i></label>
+									<label for="rating-1" title="1 з 5"><i aria-hidden="true" class="icon-duck"></i></label>
 								</section>
 							</fieldset>
 
@@ -2283,7 +2289,7 @@
 			<section class="popup__wrapper popup-menu__wrapper">
 				<section class="popup__body popup-menu__body">
 					<header class="popup__header popup-menu__header">
-						<button data-popup-close type="button" class="popup__close"><i class="icon-cross"></i></button>
+						<button data-popup-close type="button" class="popup__close"><i aria-hidden="true" class="icon-cross"></i></button>
 					</header>
 					<section class="popup__content popup-menu__content">
 						<section class="popup-menu__slider swiper swiper-menu">
@@ -2291,14 +2297,14 @@
 
 								<section class="popup-menu__slide swiper-slide">
 									<picture>
-										<img width="995" height="1400" class="popup-menu__image" loading="lazy"
+										<img width="995" height="1400" loading="lazy" fetchpriority="low" class="popup-menu__image" loading="lazy"
 											src="./src/images/menu/flavours_menu_1.png" alt="Меня сміків" />
 									</picture>
 								</section>
 
 								<section class="popup-menu__slide swiper-slide">
 									<picture>
-										<img width="995" height="1400" class="popup-menu__image" loading="lazy"
+										<img width="995" height="1400" loading="lazy" fetchpriority="low" class="popup-menu__image" loading="lazy"
 											src="./src/images/menu/flavours_menu_2.png" alt="Меня сміків" />
 									</picture>
 								</section>
@@ -2312,7 +2318,7 @@
 
 	</section>
 
-	<script type="module" src="./src/scripts/index.js"></script>
+	<script type="module" defer src="./src/scripts/index.js"></script>
 </body>
 
 </html>
