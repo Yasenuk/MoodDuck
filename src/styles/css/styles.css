@@ -412,8 +412,10 @@ body._locked {
 .cube__side img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 ._back-hide .cube__side {
   backface-visibility: hidden;
@@ -511,7 +513,9 @@ body._locked {
 }
 
 .swiper-slide {
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   overflow: hidden;
   position: relative;
 }
@@ -519,7 +523,8 @@ body._locked {
 .swiper-pagination {
   display: flex;
   align-items: center;
-  column-gap: 0.1875rem;
+  -moz-column-gap: 0.1875rem;
+       column-gap: 0.1875rem;
   z-index: 30;
 }
 @media (max-width: 47.99875em) {
@@ -592,24 +597,28 @@ body._locked {
 }
 @media (min-width: 83.5em) {
   .swiper-buttons {
-    column-gap: 0.375rem;
+    -moz-column-gap: 0.375rem;
+         column-gap: 0.375rem;
   }
 }
 @media (min-width: 20em) and (max-width: 83.5em) {
-  @supports (column-gap: clamp( 0.375rem , 0.5393700787rem  +  -0.1968503937vw , 0.5rem )) {
+  @supports ((-moz-column-gap: clamp( 0.375rem , 0.5393700787rem  +  -0.1968503937vw , 0.5rem )) or (column-gap: clamp( 0.375rem , 0.5393700787rem  +  -0.1968503937vw , 0.5rem ))) {
     .swiper-buttons {
-      column-gap: clamp( 0.375rem , 0.5393700787rem  +  -0.1968503937vw , 0.5rem );
+      -moz-column-gap: clamp( 0.375rem , 0.5393700787rem  +  -0.1968503937vw , 0.5rem );
+           column-gap: clamp( 0.375rem , 0.5393700787rem  +  -0.1968503937vw , 0.5rem );
     }
   }
-  @supports not (column-gap: clamp( 0.375rem , 0.5393700787rem  +  -0.1968503937vw , 0.5rem )) {
+  @supports not ((-moz-column-gap: clamp( 0.375rem , 0.5393700787rem  +  -0.1968503937vw , 0.5rem )) or (column-gap: clamp( 0.375rem , 0.5393700787rem  +  -0.1968503937vw , 0.5rem ))) {
     .swiper-buttons {
-      column-gap: calc(0.5rem + -0.125 * (100vw - 20rem) / 63.5);
+      -moz-column-gap: calc(0.5rem + -0.125 * (100vw - 20rem) / 63.5);
+           column-gap: calc(0.5rem + -0.125 * (100vw - 20rem) / 63.5);
     }
   }
 }
 @media (max-width: 20em) {
   .swiper-buttons {
-    column-gap: 0.5rem;
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
   }
 }
 
@@ -771,7 +780,9 @@ body._locked {
   padding: 0.3125rem 0.625rem;
   pointer-events: none;
   transform-origin: center;
+  transition: transform 0.3s ease 0.15s, scale 0.3s ease 0.5s, -webkit-backdrop-filter 1s ease-in-out;
   transition: transform 0.3s ease 0.15s, scale 0.3s ease 0.5s, backdrop-filter 1s ease-in-out;
+  transition: transform 0.3s ease 0.15s, scale 0.3s ease 0.5s, backdrop-filter 1s ease-in-out, -webkit-backdrop-filter 1s ease-in-out;
   transform: translateY(100%);
   scale: 0;
   z-index: 150;
@@ -779,11 +790,14 @@ body._locked {
 }
 .popup._open {
   pointer-events: auto;
+  transition: transform 0.3s 0.05s, scale 0.3s ease 0.15s, -webkit-backdrop-filter 2.5s ease-in-out 0.1s;
   transition: transform 0.3s 0.05s, scale 0.3s ease 0.15s, backdrop-filter 2.5s ease-in-out 0.1s;
+  transition: transform 0.3s 0.05s, scale 0.3s ease 0.15s, backdrop-filter 2.5s ease-in-out 0.1s, -webkit-backdrop-filter 2.5s ease-in-out 0.1s;
   transform: translateY(0);
   scale: 1;
   background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
 }
 .popup__wrapper {
   display: flex;
@@ -934,7 +948,8 @@ body._locked {
   align-items: center;
   justify-content: start;
   flex-direction: row-reverse;
-  column-gap: 0.25rem;
+  -moz-column-gap: 0.25rem;
+       column-gap: 0.25rem;
   margin-bottom: 0.375rem;
   font-size: 1.5625rem;
 }
@@ -1012,6 +1027,9 @@ body._locked {
 .form-review__input:focus {
   outline: 0.125rem solid var(--accent-color);
 }
+.form-review__input::-moz-placeholder {
+  opacity: 0.8;
+}
 .form-review__input::placeholder {
   opacity: 0.8;
 }
@@ -1044,7 +1062,8 @@ body._locked {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(21.375rem, 1fr));
   grid-template-rows: auto;
-  column-gap: 0.625rem;
+  -moz-column-gap: 0.625rem;
+       column-gap: 0.625rem;
 }
 @media (max-width: 47.99875em) {
   .form-review__row {
@@ -1083,8 +1102,10 @@ body._locked {
   height: 100%;
   max-height: 80vh;
   aspect-ratio: 9/13;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .-nowrap {
@@ -1143,7 +1164,8 @@ body._locked {
 .banner {
   max-width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 0;
 }
 ._loaded .banner {
@@ -1152,10 +1174,12 @@ body._locked {
   transition-delay: 1s;
 }
 .banner_center {
-  object-position: center;
+  -o-object-position: center;
+     object-position: center;
 }
 .banner_right {
-  object-position: right center;
+  -o-object-position: right center;
+     object-position: right center;
 }
 
 .heading {
@@ -1513,8 +1537,10 @@ body._locked {
   width: 100%;
   max-width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1563,8 +1589,10 @@ body._locked {
   max-width: 100%;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 @keyframes rotate-duck {
   0% {
@@ -1731,24 +1759,28 @@ body._locked {
 }
 @media (min-width: 90em) {
   .menu__list_links {
-    column-gap: 1.5rem;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
   }
 }
 @media (min-width: 61.99875em) and (max-width: 90em) {
-  @supports (column-gap: clamp( 0.625rem , -1.3123744476rem  +  3.1248604973vw , 1.5rem )) {
+  @supports ((-moz-column-gap: clamp( 0.625rem , -1.3123744476rem  +  3.1248604973vw , 1.5rem )) or (column-gap: clamp( 0.625rem , -1.3123744476rem  +  3.1248604973vw , 1.5rem ))) {
     .menu__list_links {
-      column-gap: clamp( 0.625rem , -1.3123744476rem  +  3.1248604973vw , 1.5rem );
+      -moz-column-gap: clamp( 0.625rem , -1.3123744476rem  +  3.1248604973vw , 1.5rem );
+           column-gap: clamp( 0.625rem , -1.3123744476rem  +  3.1248604973vw , 1.5rem );
     }
   }
-  @supports not (column-gap: clamp( 0.625rem , -1.3123744476rem  +  3.1248604973vw , 1.5rem )) {
+  @supports not ((-moz-column-gap: clamp( 0.625rem , -1.3123744476rem  +  3.1248604973vw , 1.5rem )) or (column-gap: clamp( 0.625rem , -1.3123744476rem  +  3.1248604973vw , 1.5rem ))) {
     .menu__list_links {
-      column-gap: calc(0.625rem + 0.875 * (100vw - 61.99875rem) / 28.00125);
+      -moz-column-gap: calc(0.625rem + 0.875 * (100vw - 61.99875rem) / 28.00125);
+           column-gap: calc(0.625rem + 0.875 * (100vw - 61.99875rem) / 28.00125);
     }
   }
 }
 @media (max-width: 61.99875em) {
   .menu__list_links {
-    column-gap: 0.625rem;
+    -moz-column-gap: 0.625rem;
+         column-gap: 0.625rem;
   }
 }
 @media (max-width: 75rem) {
@@ -1763,7 +1795,8 @@ body._locked {
   }
 }
 .menu__social {
-  column-gap: 0.5rem;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 .menu__item {
   transform: translateY(-150%);
@@ -2128,9 +2161,13 @@ body._locked {
 .main__bg-picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center bottom;
-  user-select: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center bottom;
+     object-position: center bottom;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   pointer-events: none;
 }
 .main__bg-picture-noise {
@@ -2149,9 +2186,13 @@ body._locked {
 .main__bg-picture-light img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center bottom;
-  user-select: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center bottom;
+     object-position: center bottom;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   pointer-events: none;
 }
 .main__bg-picture-graffiti {
@@ -2710,8 +2751,10 @@ body._locked {
 .gallery-merch__card .product-card__picture .product-card__image {
   height: 100%;
   max-width: 100%;
-  object-fit: contain;
-  object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .about__subtitle {
@@ -2752,24 +2795,28 @@ body._locked {
 }
 @media (min-width: 83.5em) {
   .about__content-wrapper {
-    column-gap: 1.75rem;
+    -moz-column-gap: 1.75rem;
+         column-gap: 1.75rem;
   }
 }
 @media (min-width: 20em) and (max-width: 83.5em) {
-  @supports (column-gap: clamp( 0.625rem , 0.2706692913rem  +  1.7716535433vw , 1.75rem )) {
+  @supports ((-moz-column-gap: clamp( 0.625rem , 0.2706692913rem  +  1.7716535433vw , 1.75rem )) or (column-gap: clamp( 0.625rem , 0.2706692913rem  +  1.7716535433vw , 1.75rem ))) {
     .about__content-wrapper {
-      column-gap: clamp( 0.625rem , 0.2706692913rem  +  1.7716535433vw , 1.75rem );
+      -moz-column-gap: clamp( 0.625rem , 0.2706692913rem  +  1.7716535433vw , 1.75rem );
+           column-gap: clamp( 0.625rem , 0.2706692913rem  +  1.7716535433vw , 1.75rem );
     }
   }
-  @supports not (column-gap: clamp( 0.625rem , 0.2706692913rem  +  1.7716535433vw , 1.75rem )) {
+  @supports not ((-moz-column-gap: clamp( 0.625rem , 0.2706692913rem  +  1.7716535433vw , 1.75rem )) or (column-gap: clamp( 0.625rem , 0.2706692913rem  +  1.7716535433vw , 1.75rem ))) {
     .about__content-wrapper {
-      column-gap: calc(0.625rem + 1.125 * (100vw - 20rem) / 63.5);
+      -moz-column-gap: calc(0.625rem + 1.125 * (100vw - 20rem) / 63.5);
+           column-gap: calc(0.625rem + 1.125 * (100vw - 20rem) / 63.5);
     }
   }
 }
 @media (max-width: 20em) {
   .about__content-wrapper {
-    column-gap: 0.625rem;
+    -moz-column-gap: 0.625rem;
+         column-gap: 0.625rem;
   }
 }
 @media (max-width: 61.99875em) {
@@ -2878,9 +2925,12 @@ body._locked {
   background-image: url(../../images/alternative/background-ducks.png);
   background-repeat: no-repeat;
   background-size: cover;
-  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-  mask-size: 100% 100%;
-  mask-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+          mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 .webp .brand-info__container::before, .webp .brand-info__container::after {
   background-image: url(../../images/alternative/background-ducks.webp);
@@ -3180,8 +3230,10 @@ body._locked {
 .flavours-info__image {
   aspect-ratio: 206/85;
   width: 100%;
-  object-fit: cover;
-  object-position: center center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }
 .flavours-info__picture-description {
   z-index: 3;
@@ -3500,7 +3552,8 @@ body._locked {
   align-items: center;
   justify-content: center;
   row-gap: 1.875rem;
-  column-gap: 1.625rem;
+  -moz-column-gap: 1.625rem;
+       column-gap: 1.625rem;
 }
 @media (max-width: 61.99875em) {
   .resources-library__footer {
@@ -3974,7 +4027,8 @@ body._locked {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  column-gap: 3.125rem;
+  -moz-column-gap: 3.125rem;
+       column-gap: 3.125rem;
   row-gap: 1.5rem;
 }
 .contacts__section {
