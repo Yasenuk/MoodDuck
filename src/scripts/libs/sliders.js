@@ -79,7 +79,7 @@ function initSliders() {
 			spaceBetween: 8,
 			speed: 800,
 
-			loop: true,
+			// loop: true,
 
 			preloadImages: false,
 			lazy: {
@@ -123,7 +123,6 @@ function initSliders() {
 			slidesPerView: 2,
 			spaceBetween: 8,
 			speed: 800,
-			loop: true,
 
 			lazy: {
 				loadPrevNext: true,

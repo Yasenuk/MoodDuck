@@ -4,13 +4,18 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="./src/styles/css/styles.css" />
-	<link rel="preload" as="image" href="./src/images/banners/banner.webp" type="image/webp">
-	<link rel="preload" as="image" href="./src/images/alternative/graffiti.webp" type="image/webp">
-	<link rel="preload" as="image" href="./src/images/alternative/noise.webp" type="image/webp">
+
+	<!-- Favicon -->
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+	<!-- Preload critical CSS -->
+	<link rel="preload" href="./src/styles/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="./src/styles/css/styles.css"></noscript>
+
+	<!-- Title -->
 	<title>MoodDuck Lab</title>
 </head>
+
 
 <body>
 	<section class="wrapper">
@@ -253,7 +258,7 @@
 							<section class="hero__slide swiper-slide">
 								<picture>
 									<source srcset="./src/images/banners/banner.webp" type="image/webp" />
-									<img width="1335" height="499" src="./src/images/banners/banner.png" alt="Банер" loading="eager"
+									<img width="1335" height="499" src="./src/images/banners/banner.png" alt="Банер" loading="lazy"
 										fetchpriority="high" class="hero__banner banner banner_center" />
 								</picture>
 							</section>
@@ -2345,7 +2350,7 @@
 		</footer>
 
 		<section class="popup" id="popup-review" role="dialog" aria-labelledby="Попап, щоб залишити відгук"
-			aria-modal="true" aria-hidden="true" data-popup>
+			aria-modal="true" data-popup>
 			<section class="popup__wrapper">
 				<section class="popup__body">
 					<header class="popup__header">
@@ -2410,7 +2415,7 @@
 		</section>
 
 		<section class="popup popup-menu" id="popup-menu" role="dialog" aria-labelledby="Попап для перегляду меню смаків"
-			aria-modal="true" aria-hidden="true" data-popup>
+			aria-modal="true" data-popup>
 			<section class="popup__wrapper popup-menu__wrapper">
 				<section class="popup__body popup-menu__body">
 					<header class="popup__header popup-menu__header">
@@ -2444,7 +2449,7 @@
 
 	</section>
 
-	<script type="module" defer src="./src/scripts/index.js"></script>
+	<script type="module" src="./src/scripts/index.js"></script>
 </body>
 
 </html>

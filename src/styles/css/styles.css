@@ -1789,9 +1789,6 @@ body._locked {
 ._watched .menu__item:nth-child(7) {
   transition-delay: 1.3s;
 }
-.menu__item_ico {
-  margin-right: 0.25rem;
-}
 @media (min-width: 83.5em) {
   .menu__item_ico {
     font-size: 2.5rem;
@@ -1812,6 +1809,11 @@ body._locked {
 @media (max-width: 20em) {
   .menu__item_ico {
     font-size: 1.875rem;
+  }
+}
+@media (max-width: 61.99875em) {
+  .menu__item_ico {
+    margin-right: 0.25rem;
   }
 }
 .menu__link {
@@ -2093,9 +2095,9 @@ body._locked {
 .main__bg {
   position: absolute;
   width: 100%;
-  max-width: 1336;
-  margin: 0 auto;
+  min-height: 100vh;
   top: 0;
+  left: 0;
   z-index: -100;
   pointer-events: none;
 }
@@ -2107,6 +2109,12 @@ body._locked {
 }
 .main__bg-group_noises {
   position: fixed;
+}
+.main__bg-group_lights {
+  max-width: 90rem;
+  width: 100%;
+  left: 50%;
+  translate: -50% 0;
 }
 .main__bg-group_graffities {
   display: flex;
@@ -2130,6 +2138,11 @@ body._locked {
   position: absolute;
   translate: 0 -50%;
   z-index: 0;
+  opacity: 0;
+}
+._loaded .main__bg-picture-light {
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 .main__bg-picture-light img {
   width: 100%;
@@ -2143,9 +2156,6 @@ body._locked {
   height: 100%;
   opacity: 0.2;
   mix-blend-mode: darken;
-}
-.main > * {
-  position: relative;
 }
 .main__hero_light {
   right: 0;
@@ -2648,6 +2658,9 @@ body._locked {
     padding-top: 6.25rem;
   }
 }
+.hero__slide {
+  opacity: 0;
+}
 @media (min-width: 83.5em) {
   .hero__slide {
     height: 31.25rem;
@@ -2669,6 +2682,10 @@ body._locked {
   .hero__slide {
     height: 30.625rem;
   }
+}
+._loaded .hero__slide {
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 .hero__slide img {
   width: 100%;

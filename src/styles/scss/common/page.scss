@@ -1,13 +1,13 @@
 .main {
 	position: relative;
 	// background: $mainColor;
-
+	
 	&__bg {
 		position: absolute;
 		width: 100%;
-		max-width: $containerWidth;
-		margin: 0 auto;
+		min-height: 100vh;
 		top: 0;
+		left: 0;
 		z-index: -100;
 		pointer-events: none;
 	}
@@ -23,6 +23,10 @@
 		}
 
 		&_lights {
+			max-width: toRem(1440);
+			width: 100%;
+			left: 50%;
+			translate: -50% 0;
 		}
 
 		&_graffities {
@@ -53,6 +57,12 @@
 		position: absolute;
 		translate: 0 -50%;
 		z-index: 0;
+		opacity: 0;
+
+		._loaded & {
+			opacity: 1;
+			transition: opacity 0.3s;
+		}
 
 		img {
 			width: 100%;
@@ -68,10 +78,6 @@
 		height: 100%;
 		opacity: 0.2;
 		mix-blend-mode: darken;
-	}
-
-	& > * {
-		position: relative;
 	}
 
 	&__hero {
@@ -195,7 +201,13 @@
 
 	&__slide {
 		@include adaptiveValue(height, 500, 490);
+		opacity: 0;
 
+		._loaded & {
+			opacity: 1;
+			transition: opacity 0.3s;
+		}
+		
 		img {
 			width: 100%;
 		}

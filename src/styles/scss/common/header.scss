@@ -11,7 +11,6 @@
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		@include adaptiveValue(margin-top, 64, 30);
-		// @include adaptiveValue(margin-bottom, 60, 30);
 	}
 
 	&__logo {
@@ -116,7 +115,10 @@
 
 		&_ico {
 			@include adaptiveValue(font-size, 40, 30);
-			margin-right: toRem(4);
+
+			@media (max-width:$tablet){
+				margin-right: toRem(4);
+			}
 		}
 	}
 
