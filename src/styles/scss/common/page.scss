@@ -199,12 +199,6 @@
 
 	&__slide {
 		@include adaptiveValue(height, 500, 490);
-		opacity: 0;
-
-		._loaded & {
-			opacity: 1;
-			transition: opacity 0.3s;
-		}
 		
 		img {
 			width: 100%;
