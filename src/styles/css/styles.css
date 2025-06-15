@@ -2170,7 +2170,7 @@ body._locked {
   background-position: center;
   background-attachment: local;
   min-height: 100dvh;
-  height: 100%;
+  height: calc(100% + 1.3125rem);
 }
 .main__bg-group_lights {
   max-width: 90rem;
@@ -2737,13 +2737,6 @@ body._locked {
   .hero__slide {
     height: 30.625rem;
   }
-}
-.hero__slide:first-child {
-  opacity: 0;
-}
-._loaded .hero__slide:first-child {
-  opacity: 1;
-  transition: opacity 0.3s ease 0.8s;
 }
 .hero__slide img {
   width: 100%;
