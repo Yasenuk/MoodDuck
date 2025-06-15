@@ -216,15 +216,6 @@
 
 	&__slide {
 		@include adaptiveValue(height, 500, 490);
-
-		&:first-child{
-			opacity: 0;
-
-			._loaded & {
-				opacity: 1;
-				transition: opacity 0.3s ease 0.8s;
-			}
-		}
 		
 		img {
 			width: 100%;
