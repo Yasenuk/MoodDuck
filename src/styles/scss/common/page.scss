@@ -216,6 +216,15 @@
 
 	&__slide {
 		@include adaptiveValue(height, 500, 490);
+
+		&:first-child{
+			opacity: 0;
+
+			._loaded & {
+				opacity: 1;
+				transition: opacity 0.3s ease 0.8s;
+			}
+		}
 		
 		img {
 			width: 100%;
@@ -1449,6 +1458,7 @@
 		border-radius: toRem(20);
 		background-color: $accentColor;
 		position: relative;
+		padding: toRem(5);
 
 		box-shadow: 0 0 toRem(12) $accentColor;
 
@@ -1456,23 +1466,12 @@
 			margin-bottom: toRem(6);
 		}
 
-		&::before,
 		&::after {
 			content: "";
 			position: absolute;
 			background-size: contain;
 			background-position: center;
 			background-repeat: no-repeat;
-		}
-
-		&::before {
-			@include adaptiveValue(width, 208, 183);
-			@include adaptiveValue(height, 156, 138);
-			left: toRem(5);
-			top: toRem(5);
-			opacity: 0.6;
-
-			background-image: url(../../images/logo.svg);
 		}
 
 		&::after {
@@ -1488,6 +1487,13 @@
 			.no-webp & {
 				background-image: url(../../images/alternative/ducks/duck-boss.png);
 			}
+		}
+
+		img {
+			position: absolute;
+			@include adaptiveValue(width, 208, 183);
+			@include adaptiveValue(height, 156, 138);
+			opacity: 0.6;
 		}
 	}
 }

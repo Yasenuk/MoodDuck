@@ -1,7 +1,7 @@
-import { BurgerMenu } from "./modules/burger-menu.js";
-import { Ligth } from "./modules/light.js";
-import { Popup } from "./modules/popup.js";
-import { Watcher } from "./modules/watcher.js";
+import { BurgerMenu } from "./modules/burger-menu.min.js";
+import { Ligth } from "./modules/light.min.js";
+import { Popup } from "./modules/popup.min.js";
+import { Watcher } from "./modules/watcher.min.js";
 
 export const _Module = {
 	watcher: new Watcher(),

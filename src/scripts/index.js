@@ -1,5 +1,5 @@
-import * as functions from "./functions/functions.js";
-import { _Module } from './module.js'
+import * as functions from "./functions/functions.min.js";
+import { _Module } from './module.min.js'
 
 /** Для коректного відображення webp із css */
 functions.isWebp();
