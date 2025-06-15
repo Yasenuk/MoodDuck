@@ -2944,7 +2944,6 @@ body._locked {
   height: 100%;
   opacity: 0.4;
   z-index: -1;
-  background-image: url(../../images/alternative/background-ducks.png);
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
@@ -2953,6 +2952,9 @@ body._locked {
           mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
           mask-repeat: no-repeat;
+}
+.brand-info__container::before .no-webp, .brand-info__container::after .no-webp {
+  background-image: url(../../images/alternative/background-ducks.png);
 }
 .webp .brand-info__container::before, .webp .brand-info__container::after {
   background-image: url(../../images/alternative/background-ducks.webp);

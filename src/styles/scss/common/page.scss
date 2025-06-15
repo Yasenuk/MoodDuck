@@ -465,7 +465,10 @@
 			height: 100%;
 			opacity: 0.4;
 			z-index: -1;
-			background-image: url(../../images/alternative/background-ducks.png);
+
+			.no-webp {
+				background-image: url(../../images/alternative/background-ducks.png);
+			}
 
 			.webp & {
 				background-image: url(../../images/alternative/background-ducks.webp);
