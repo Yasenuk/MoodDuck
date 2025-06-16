@@ -63,6 +63,15 @@
 	height: 100%;
 	object-fit: cover;
 
+	// ._watcher-element & {
+	// 	opacity: 0;
+	// }
+
+	// ._watched & {
+	// 	opacity: 1;
+	// 	transition: opacity 0.3s ease 1s;
+	// }
+
 	._loaded & {
 		display: block;
 	}

@@ -1166,12 +1166,9 @@ body._locked {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0;
 }
 ._loaded .banner {
-  opacity: 1;
-  transition: opacity ease-in-out 1s;
-  transition-delay: 1s;
+  display: block;
 }
 .banner_center {
   -o-object-position: center;
