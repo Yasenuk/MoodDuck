@@ -76,12 +76,6 @@
 		position: absolute;
 		transform: translateY(-50%);
 		z-index: 0;
-		opacity: 0;
-
-		._loaded & {
-			opacity: 1;
-			transition: opacity 0.3s;
-		}
 
 		img {
 			width: 100%;
@@ -99,6 +93,15 @@
 			@include adaptiveValue(height, 644, 523);
 			right: 0;
 			transform: translateY(0) translateX(0);
+
+			&._watcher-element {
+				opacity: 0;
+			}
+
+			&._watched {
+				opacity: 1;
+				transition: opacity 0.8s ease;
+			}
 		}
 	}
 
