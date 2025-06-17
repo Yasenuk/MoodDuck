@@ -2142,14 +2142,21 @@ body._locked {
   left: 0;
   top: 0;
 }
+.main__bg-group_noises {
+  opacity: 0;
+}
 .no-webp .main__bg-group_noises {
   background-image: url(../../images/alternative/noise.png);
 }
 .webp .main__bg-group_noises {
   background-image: url(../../images/alternative/noise.webp);
 }
+._loaded .main__bg-group_noises {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
 .main__bg-group_graffities {
-  opacity: 0.2;
+  opacity: 0;
   mix-blend-mode: darken;
 }
 .no-webp .main__bg-group_graffities {
@@ -2157,6 +2164,10 @@ body._locked {
 }
 .webp .main__bg-group_graffities {
   background-image: url(../../images/alternative/graffiti.webp);
+}
+._loaded .main__bg-group_graffities {
+  opacity: 0.2;
+  transition: opacity 0.3s;
 }
 .main__bg-group_noises, .main__bg-group_graffities {
   position: absolute;

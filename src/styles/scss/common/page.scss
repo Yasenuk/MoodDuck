@@ -27,6 +27,13 @@
 			.webp & {
 				background-image: url(../../images/alternative/noise.webp);
 			}
+
+			opacity: 0;
+
+			._loaded & {
+				opacity: 1;
+				transition: opacity 0.3s;
+			}
 		}
 
 		&_graffities {
@@ -38,7 +45,13 @@
 				background-image: url(../../images/alternative/graffiti.webp);
 			}
 
-			opacity: 0.2;
+			opacity: 0;
+
+			._loaded & {
+				opacity: 0.2;
+				transition: opacity 0.3s;
+			}
+
 			mix-blend-mode: darken;
 		}
 
