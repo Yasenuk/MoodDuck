@@ -1167,13 +1167,6 @@ body._locked {
   -o-object-fit: cover;
      object-fit: cover;
 }
-._watcher-element .banner {
-  opacity: 0;
-}
-._watched .banner {
-  opacity: 1;
-  transition: opacity 0.8s ease;
-}
 .banner_center {
   -o-object-position: center;
      object-position: center;
@@ -2198,6 +2191,11 @@ body._locked {
   position: absolute;
   transform: translateY(-50%);
   z-index: 0;
+  opacity: 0;
+}
+._loaded .main__bg-picture-light {
+  opacity: 1;
+  transition: opacity 0.3s;
 }
 .main__bg-picture-light img {
   width: 100%;
@@ -2258,13 +2256,6 @@ body._locked {
   .main__hero_light {
     height: 32.6875rem;
   }
-}
-.main__hero_light._watcher-element {
-  opacity: 0;
-}
-.main__hero_light._watched {
-  opacity: 1;
-  transition: opacity 0.8s ease;
 }
 .main__gallery_light {
   left: 0;
