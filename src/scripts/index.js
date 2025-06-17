@@ -68,3 +68,13 @@ if (buttons && buttons.length != 0) {
 		});
 	});
 }
+
+window.addEventListener("load", () => {
+	const images = document.querySelectorAll("img");
+	if (images && images.length != 0) {
+		images.forEach(img => {
+			img.setAttribute("width", img.offsetWidth);
+			img.setAttribute("height", img.clientHeight);
+		});
+	}
+});
