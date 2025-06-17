@@ -403,7 +403,7 @@
 		}
 	}
 
-	&__banners {
+	&__promo {
 		max-width: 50%;
 		width: 100%;
 		position: relative;
@@ -413,20 +413,9 @@
 		}
 	}
 
-	&__slider {
-		max-width: 100%;
-		width: 100%;
+	video {
 		@include adaptiveValue(height, 453, 490);
 		position: relative;
-
-		._watcher-element & {
-			opacity: 0;
-		}
-
-		._watched & {
-			transition: opacity 0.8s cubic-bezier(0.51, 0.38, 0.62, 1.49) 0.5s;
-			opacity: 1;
-		}
 	}
 
 	&__wrapper {
@@ -1199,143 +1188,6 @@
 		@media (max-width: $mobile) {
 			width: toRem(316);
 		}
-	}
-}
-
-.card-review {
-	.swiper-slide-active & {
-		border: toRem(3) solid $accentColor;
-	}
-
-	@include adaptiveValue(padding-top, 30, 20);
-	@include adaptiveValue(padding-left, 30, 20);
-	@include adaptiveValue(padding-bottom, 40, 30);
-	@include adaptiveValue(padding-right, 30, 20);
-
-	color: $mainColor;
-
-	&__header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		flex-wrap: wrap;
-
-		@media (max-width: $mobile) {
-			flex-direction: column;
-			align-items: center;
-		}
-	}
-
-	&__user-info {
-		display: flex;
-	}
-
-	&__avatar {
-		aspect-ratio: 1 / 1;
-		width: toRem(44);
-		border-radius: 50%;
-		background-color: rgba(147, 147, 147, 1);
-		overflow: hidden;
-		margin-right: toRem(10);
-	}
-
-	&__info-group {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		line-height: toRem(20);
-	}
-
-	&__user-name {
-		font-weight: 600;
-	}
-
-	&__datetime {
-		font-weight: 500;
-		font-size: toRem(14);
-	}
-
-	&__rating {
-		display: flex;
-		align-items: center;
-		justify-content: end;
-		row-gap: toRem(2);
-
-		@media (max-width: $mobile) {
-			margin-top: toRem(24);
-		}
-	}
-
-	&__rating-item {
-		@include adaptiveValue(font-size, 25, 22);
-		color: rgba(147, 147, 147, 1);
-
-		&_active {
-			color: $accentColor;
-		}
-	}
-
-	&__content {
-		flex: 1 1 auto;
-		font-weight: 500;
-		line-height: toRem(20);
-		@include adaptiveValue(margin-block, 40, 24);
-	}
-
-	&__paragraph {
-		text-overflow: ellipsis;
-
-		&:not(:last-child) {
-			margin-bottom: toRem(20);
-		}
-	}
-
-	&__footer {
-		display: flex;
-		justify-content: space-between;
-
-		@media (max-width: $mobile) {
-			flex-direction: column;
-			align-items: center;
-			justify-content: start;
-			text-align: center;
-		}
-	}
-
-	&__pluses {
-		margin-right: toRem(20);
-
-		@media (max-width: $mobile) {
-			margin-right: 0;
-			margin-bottom: toRem(24);
-		}
-	}
-
-	&__pluses,
-	&__minuses {
-		flex: 1 1 50%;
-	}
-
-	&__group-title {
-		font-size: toRem(16);
-		font-weight: 600;
-		line-height: toRem(20);
-		@include adaptiveValue(margin-bottom, 20, 10);
-	}
-
-	&__list {
-		font-size: toRem(16);
-		font-weight: 500;
-		line-height: toRem(18);
-	}
-
-	&__pluses-list {
-	}
-
-	&__minuses {
-	}
-
-	&__minusess-list {
 	}
 }
 
