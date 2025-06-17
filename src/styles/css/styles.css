@@ -2403,37 +2403,56 @@ body._locked {
   top: 0;
 }
 .main__bg-group_noises {
-  opacity: 0;
-}
-.no-webp .main__bg-group_noises {
-  background-image: url(../../images/alternative/noise.png);
-}
-.webp .main__bg-group_noises {
-  background-image: url(../../images/alternative/noise.webp);
-}
-._loaded .main__bg-group_noises {
   opacity: 1;
-  transition: opacity 0.3s;
+}
+@media (max-width: 90rem) {
+  .no-webp .main__bg-group_noises {
+    background-image: url(../../images/alternative/noise.png);
+  }
+}
+@media (max-width: 47.99875em) {
+  .no-webp .main__bg-group_noises {
+    background-image: url(../../images/alternative/noise-750.png);
+  }
+}
+@media (max-width: 90rem) {
+  .webp .main__bg-group_noises {
+    background-image: url(../../images/alternative/noise.webp);
+  }
+}
+@media (max-width: 47.99875em) {
+  .webp .main__bg-group_noises {
+    background-image: url(../../images/alternative/noise-750.webp);
+  }
 }
 .main__bg-group_graffities {
-  opacity: 0;
+  opacity: 0.2;
   mix-blend-mode: darken;
 }
-.no-webp .main__bg-group_graffities {
-  background-image: url(../../images/alternative/graffiti.png);
+@media (max-width: 90rem) {
+  .no-webp .main__bg-group_graffities {
+    background-image: url(../../images/alternative/graffiti.png);
+  }
 }
-.webp .main__bg-group_graffities {
-  background-image: url(../../images/alternative/graffiti.webp);
+@media (max-width: 47.99875em) {
+  .no-webp .main__bg-group_graffities {
+    background-image: url(../../images/alternative/graffiti-750.png);
+  }
 }
-._loaded .main__bg-group_graffities {
-  opacity: 0.2;
-  transition: opacity 0.3s;
+@media (max-width: 90rem) {
+  .webp .main__bg-group_graffities {
+    background-image: url(../../images/alternative/graffiti.webp);
+  }
+}
+@media (max-width: 47.99875em) {
+  .webp .main__bg-group_graffities {
+    background-image: url(../../images/alternative/graffiti-750.webp);
+  }
 }
 .main__bg-group_noises, .main__bg-group_graffities {
   position: absolute;
   background-size: contain;
   background-position: center;
-  background-attachment: local;
   min-height: 100dvh;
   height: calc(100% + 1.3125rem);
 }
@@ -3002,9 +3021,6 @@ body._locked {
   .hero__slide {
     height: 30.625rem;
   }
-}
-.hero__slide img {
-  width: 100%;
 }
 .gallery-flavours__subtitle {
   max-width: 18rem;
