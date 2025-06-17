@@ -1638,7 +1638,7 @@
 								Підписуйся на нас в соцмережах - далі буде ще гарячіше.
 							</p>
 						</section>
-						<section class="about__promo">
+						<section class="about__banners">
 							<div class="about__decorative-duck decorative-duck">
 								<picture>
 									<source srcset="./src/images/alternative/ducks/mafia-duck.webp" type="image/webp" />
@@ -1647,18 +1647,38 @@
 								</picture>
 							</div>
 
-							<!-- <video
-								width="100%"
-								height="100%"
-								controls
-								preload="none"
-								loading="lazy"
-								poster="/preview.jpg"
-							>
-								<source src="./src/videos/promo1.mp4" type="video/webm" />
-								<source src="./src/videos/promo1.mp4" type="video/mp4" />
-								Your browser does not support the video tag.
-							</video> -->
+							<section class="about__slider swiper swiper-banner">
+								<section class="about__wrapper swiper-wrapper">
+									<section class="about__slide swiper-slide">
+										<picture>
+											<!-- <source srcset="./src/images/banners/banner-750.webp" media="(max-width: 768px)" type="image/webp" />
+											<source srcset="./src/images/banners/banner-750.png" media="(max-width: 768px)" type="image/png" /> -->
+											<source srcset="./src/images/banners/banner-750.webp" type="image/webp" />
+											<img
+												width="750"
+												height="495"
+												src="./src/images/banners/banner-750.png"
+												alt="Банер"
+												loading="lazy"
+												class="about__banner banner banner_center"
+											/>
+										</picture>
+									</section>
+								</section>
+								<section class="about__conrtol swiper-conrtol">
+									<section class="about__slider-buttons swiper-buttons">
+										<button type="button" class="about__slider-button about__slider-button_prev swiper-button-prev"
+											aria-label="До попереднього слайду">
+											<i aria-hidden="true" class="icon-arrow"></i>
+										</button>
+										<button type="button" class="about__slider-button about__slider-button_next swiper-button-next"
+											aria-label="До наступного слайду">
+											<i aria-hidden="true" class="icon-arrow"></i>
+										</button>
+									</section>
+									<section class="about__pagination swiper-pagination"></section>
+								</section>
+							</section>
 						</section>
 					</section>
 				</section>

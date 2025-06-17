@@ -412,7 +412,7 @@
 		}
 	}
 
-	&__promo {
+	&__banners {
 		max-width: 50%;
 		width: 100%;
 		position: relative;
@@ -422,9 +422,20 @@
 		}
 	}
 
-	video {
-		@include adaptiveValue(height, 453, 490);
+	&__slider {
+		max-width: 100%;
+		width: 100%;
+		@include adaptiveValue(min-height, 453, 490);
 		position: relative;
+
+		._watcher-element & {
+			opacity: 0;
+		}
+
+		._watched & {
+			transition: opacity 0.8s cubic-bezier(0.51, 0.38, 0.62, 1.49) 0.5s;
+			opacity: 1;
+		}
 	}
 
 	&__wrapper {
