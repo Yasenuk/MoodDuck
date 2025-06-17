@@ -159,8 +159,8 @@
 						<section class="hero__wrapper swiper-wrapper">
 							<section class="hero__slide swiper-slide">
 								<picture>
-									<source srcset="./src/images/banners/banner-750.webp" media="(min-width: 768px)" type="image/webp" />
-								  <source srcset="./src/images/banners/banner-750.png" media="(min-width: 768px)" type="image/png" />
+									<source srcset="./src/images/banners/banner-750.webp" media="(max-width: 768px)" type="image/webp" />
+								  <source srcset="./src/images/banners/banner-750.png" media="(max-width: 768px)" type="image/png" />
 									<source srcset="./src/images/banners/banner.webp" type="image/webp" />
 									<img
 										width="1335"
@@ -169,6 +169,7 @@
 										alt="Банер"
 										loading="eager"
 										fetchpriority="high"
+    								sizes="(max-width: 768px) 750px, 100vw"
 										class="hero__banner banner banner_center"
 									/>
 								</picture>
