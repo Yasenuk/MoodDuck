@@ -78,3 +78,11 @@ if (buttons && buttons.length != 0) {
 // 		});
 // 	}
 // });
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('✅ Service Worker зареєстровано:', reg))
+      .catch(err => console.error('❌ Помилка реєстрації SW:', err));
+  });
+}
