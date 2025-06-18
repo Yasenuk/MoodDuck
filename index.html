@@ -13,9 +13,11 @@
 	
 	<meta name="theme-color" content="#000000">
 
-	
+	<link rel="dns-prefetch" href="https://yasenuk.github.io">
+	<link rel="preconnect" href="https://yasenuk.github.io">
+
 	<link rel="manifest" href="./manifest.json" />
-	
+
 	<link rel="preload" href="./src/images/alternative/graffiti.webp" as="image" imagesrcset="./src/images/alternative/graffiti-768.webp 768w, ./src/images/alternative/graffiti.webp 1440w" imagesizes="100vw">
 	<link rel="preload" href="./src/images/alternative/noise.webp" as="image" imagesrcset="./src/images/alternative/noise-768.webp 768w, ./src/images/alternative/noise.webp 1440w" imagesizes="100vw">
 	
@@ -26,34 +28,34 @@
 			margin: 0px;
 			border: 0px;
 		}
-		
+
 		*,
 		*::before,
 		*::after {
 			box-sizing: border-box;
 		}
-		
+
 		*::before,
 		*::after {
 			display: inline-block;
 		}
-		
+
 		:focus,
 		:active {
 			outline: none;
 		}
-		
+
 		a:focus,
 		a:active {
 			outline: none;
 		}
-		
+
 		html,
 		body {
 			height: 100%;
 			min-width: 20rem;
 		}
-		
+
 		body {
 			color: var(--text-color-light);
 			line-height: 1;
@@ -66,7 +68,7 @@
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
 		}
-		
+
 		input,
 		button,
 		textarea {
@@ -76,36 +78,36 @@
 			color: inherit;
 			background-color: transparent;
 		}
-		
+
 		input,
 		textarea {
 			width: 100%;
 		}
-		
+
 		label {
 			display: inline-block;
 		}
-		
+
 		button,
 		select,
 		option {
 			cursor: pointer;
 		}
-		
+
 		a {
 			display: inline-block;
 			color: inherit;
 			text-decoration: none;
 		}
-		
+
 		ul, li {
 			list-style: none;
 		}
-		
+
 		img {
 			vertical-align: top;
 		}
-		
+
 		h1,
 		h2,
 		h3,
@@ -115,25 +117,22 @@
 			font-weight: inherit;
 			font-size: inherit;
 		}
-		
+
 		html {
 			scroll-behavior: smooth;
 		}
-		</style>
+	</style>
 	<link rel="stylesheet" href="./src/styles/css/styles.min.css" />
 
-	<link rel="preload" href="./src/images/banners/banner.webp" as="image" imagesrcset="./src/images/banners/banner-400.webp 540w ./src/images/banners/banner-750.webp 768w, ./src/images/banners/banner.webp 1335w" imagesizes="100vw">
+	<link rel="preload" href="./src/images/banners/banner.webp" as="image" imagesrcset="./src/images/banners/banner-750.webp 768w, ./src/images/banners/banner.webp 1335w" imagesizes="100vw">
 	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/lights/light-hero.webp">
-	
-	<link rel="dns-prefetch" href="https://yasenuk.github.io">
-	<link rel="preconnect" href="https://yasenuk.github.io">
-	
+
 	<title>MoodDuck Lab - Преміальні ароматизатори для само­замісу</title>
 </head>
 
 <body>
 	<section class="wrapper">
-		
+
 		<header class="header">
 			<section class="header__container" data-watch data-watch-margin="0px">
 				<nav class="header__menu menu" data-burger>
@@ -267,23 +266,22 @@
 						<section class="hero__wrapper swiper-wrapper">
 							<section class="hero__slide swiper-slide">
 								<picture>
-									<source 
-											srcset="./src/images/banners/banner-400.webp 400w,
-															./src/images/banners/banner-750.webp 768w,
-															./src/images/banners/banner.webp 1335w"
-											type="image/webp"
-											sizes="(max-width: 400px) 400px, (max-width: 768px) 768px, 1335px"
-									>
-									<img
-											src="./src/images/banners/banner-750.webp"
-											alt="Банер"
-											width="1335"
-											height="500"
-											loading="eager"
-											fetchpriority="high"
-											decoding="async"
-											style="width: 100%; height: auto;"
-										>
+										<source 
+												srcset="./src/images/banners/banner-750.webp 768w, 
+																./src/images/banners/banner.webp 1335w" 
+												type="image/webp" 
+												sizes="100vw"
+										/>
+										<img
+												width="1335"
+												height="500"
+												src="./src/images/banners/banner.png"
+												alt="Банер"
+												loading="eager"
+												fetchpriority="high"
+												decoding="async"
+												class="hero__banner banner banner_center"
+										/>
 								</picture>
 							</section>
 						</section>
