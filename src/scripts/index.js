@@ -27,7 +27,7 @@ _Module.light.init();
 
 
 /* Робота зі слайдером */
-import "./libs/sliders.min.js";
+// import "./libs/sliders.min.js";
 
 /* Інше */
 
