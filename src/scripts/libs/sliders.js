@@ -14,7 +14,10 @@ const sliders = [
       spaceBetween: 20,
       speed: 800,
       grabCursor: true,
-      preloadImages: false,
+      preloadImages: true,
+      lazy: {
+        loadPrevNext: true
+      },
       lazy: true,
       pagination: {
         el: ".swiper-pagination",
@@ -37,8 +40,7 @@ const sliders = [
       loopedSlides: 21,
       preloadImages: false,
       lazy: {
-        loadPrevNext: true,
-        loadOnTransitionStart: true,
+        loadPrevNext: true
       },
       watchSlidesProgress: true,
       freeMode: true,
@@ -66,8 +68,7 @@ const sliders = [
       grabCursor: true,
       preloadImages: false,
       lazy: {
-        loadPrevNext: true,
-        loadOnTransitionStart: true,
+        loadPrevNext: true
       },
       watchSlidesProgress: true,
       freeMode: true,
@@ -93,8 +94,7 @@ const sliders = [
       speed: 800,
       grabCursor: true,
       lazy: {
-        loadPrevNext: true,
-        loadOnTransitionStart: true,
+        loadPrevNext: true
       },
       watchSlidesProgress: true,
       freeMode: true,

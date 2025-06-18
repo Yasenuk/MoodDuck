@@ -220,6 +220,7 @@
 
 	&__slide {
 		@include adaptiveValue(height, 500, 490);
+		content-visibility: auto;
 	}
 
 	&__slider-button {
