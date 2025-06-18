@@ -1,7 +1,7 @@
 // === SwiperManager.js ===
-import Swiper from "./swiper/swiper.min.js";
-import Navigation from "./swiper/modules/navigation.min.js";
-import Pagination from "./swiper/modules/pagination.min.js";
+import { Swiper } from "./swiper/swiper.min.mjs";
+import Navigation from "./swiper/modules/navigation.min.mjs";
+import Pagination from "./swiper/modules/pagination.min.mjs";
 
 const lazyModules = [Navigation, Pagination];
 
