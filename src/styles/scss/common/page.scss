@@ -214,6 +214,10 @@
 		@include adaptiveValue(padding-top, 210, 100);
 	}
 
+	&__banner {
+		max-width: 1335px;
+	}
+
 	&__slide {
 		@include adaptiveValue(height, 500, 490);
 	}

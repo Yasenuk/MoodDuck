@@ -2969,6 +2969,9 @@ body._locked {
     padding-top: 6.25rem;
   }
 }
+.hero__banner {
+  max-width: 1335px;
+}
 @media (min-width: 83.5em) {
   .hero__slide {
     height: 31.25rem;
