@@ -263,10 +263,11 @@
 						<section class="hero__wrapper swiper-wrapper">
 							<section class="hero__slide swiper-slide">
 								<picture>
-									<source srcset="./src/images/banners/banner-750.webp" media="(max-width: 768px)" type="image/webp" />
-								  <source srcset="./src/images/banners/banner-750.png" media="(max-width: 768px)" type="image/png" />
+									<!-- <source srcset="./src/images/banners/banner-750.webp" media="(max-width: 768px)" type="image/webp" />
+								  <source srcset="./src/images/banners/banner-750.png" media="(max-width: 768px)" type="image/png" /> -->
 									<source srcset="./src/images/banners/banner.webp" type="image/webp" />
 									<img
+										decoding="async"
 										width="1335"
 										height="500"
 										src="./src/images/banners/banner.png"
@@ -276,6 +277,9 @@
 										class="hero__banner banner banner_center"
 									/>
 								</picture>
+								<noscript>
+									<img src="./src/images/banners/banner.webp" alt="Банер" width="1335" height="500" />
+								</noscript>
 							</section>
 						</section>
 						<section class="hero__conrtol swiper-conrtol">

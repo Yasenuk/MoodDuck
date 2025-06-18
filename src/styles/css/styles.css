@@ -767,6 +767,10 @@ body._locked {
   border-radius: 1.25rem;
   border: 0.0625rem solid var(--text-color-light);
 }
+.swiper-banner .swiper-slide:first-child {
+  opacity: 1;
+  transform: none;
+}
 
 .swiper-card .swiper-slide {
   display: flex;

@@ -161,6 +161,11 @@
 		border-radius: toRem(20);
 		border: toRem(1) solid $mainColorLight;
 	}
+
+	.swiper-slide:first-child {
+		opacity: 1;
+		transform: none;
+	}
 }
 
 .swiper-card {
