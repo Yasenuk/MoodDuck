@@ -15,8 +15,8 @@
 
 	<link rel="manifest" href="./manifest.json" />
 
-	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/graffiti.webp">
-	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/noise.webp">
+	<link rel="preload" href="./src/images/alternative/graffiti.webp" as="image" imagesrcset="./src/images/alternative/graffiti-768.webp 768w, ./src/images/alternative/graffiti.webp 1440w" imagesizes="100vw">
+	<link rel="preload" href="./src/images/alternative/noise.webp" as="image" imagesrcset="./src/images/alternative/noise-768.webp 768w, ./src/images/alternative/noise.webp 1440w" imagesizes="100vw">
 	
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 	<style>
@@ -121,8 +121,7 @@
 	</style>
 	<link rel="stylesheet" href="./src/styles/css/styles.min.css" />
 
-	<link rel="preload" as="image" href="./src/images/banners/banner-750.webp" media="(max-width: 768px)" type="image/webp" fetchpriority="high">
-	<link rel="preload" as="image" href="./src/images/banners/banner.webp" media="(min-width: 769px)" type="image/webp" fetchpriority="high">
+	<link rel="preload" href="./src/images/banners/banner.webp" as="image" imagesrcset="./src/images/banners/banner-750.webp 768w, ./src/images/banners/banner.webp 1335w" imagesizes="100vw">
 	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/lights/light-hero.webp">
 
 	<title>MoodDuck Lab - Преміальні ароматизатори для само­замісу</title>
@@ -2455,17 +2454,57 @@
 
 								<section class="popup-menu__slide swiper-slide">
 									<picture>
-										<source srcset="./src/images/menu/flavours_menu_1.webp" type="image/webp">
-										<img data-image width="995" height="1400" loading="lazy" class="popup-menu__image"
-											src="./src/images/menu/flavours_menu_1.png" alt="Меню сміків" />
+											<source 
+													srcset="./src/images/menu/flavours_menu_1-400.webp 400w,
+																	./src/images/menu/flavours_menu_1-800.webp 800w,
+																	./src/images/menu/flavours_menu_1.webp 995w"
+													type="image/webp"
+													sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 995px"
+											>
+											<source 
+													srcset="./src/images/menu/flavours_menu_1-400.png 400w,
+																	./src/images/menu/flavours_menu_1-800.png 800w,
+																	./src/images/menu/flavours_menu_1.png 995w"
+													type="image/png"
+													sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 995px"
+											>
+											<img
+													src="./src/images/menu/flavours_menu_1-400.png"
+													alt="Меню смаків"
+													loading="lazy"
+													decoding="async"
+													width="995"
+													height="1400"
+													style="width: 100%; height: auto;"
+											>
 									</picture>
 								</section>
 
 								<section class="popup-menu__slide swiper-slide">
 									<picture>
-										<source srcset="./src/images/menu/flavours_menu_2.webp" type="image/webp">
-										<img data-image width="995" height="1400" loading="lazy" class="popup-menu__image"
-											src="./src/images/menu/flavours_menu_2.png" alt="Меню сміків" />
+										<source 
+												srcset="./src/images/menu/flavours_menu_2-400.webp 400w,
+																./src/images/menu/flavours_menu_2-800.webp 800w,
+																./src/images/menu/flavours_menu_2.webp 995w"
+												type="image/webp"
+												sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 995px"
+										>
+										<source 
+												srcset="./src/images/menu/flavours_menu_2-400.png 400w,
+																./src/images/menu/flavours_menu_2-800.png 800w,
+																./src/images/menu/flavours_menu_2.png 995w"
+												type="image/png"
+												sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, 995px"
+										>
+										<img
+												src="./src/images/menu/flavours_menu_2-400.png"
+												alt="Меню смаків"
+												loading="lazy"
+												decoding="async"
+												width="995"
+												height="1400"
+												style="width: 100%; height: auto;"
+											>
 									</picture>
 								</section>
 
