@@ -2777,9 +2777,7 @@ body._locked {
 }
 .main__page-404_light {
   left: 0;
-  bottom: 0;
-  transform: translateY(-100%);
-  scale: -1 -1;
+  transform: translateY(-100%) translateX(0) scale(-1);
 }
 @media (min-width: 83.5em) {
   .main__page-404_light {
