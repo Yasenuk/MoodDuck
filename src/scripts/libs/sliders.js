@@ -1,9 +1,10 @@
 // === SwiperManager.js ===
-import Swiper from "./swiper/swiper.min.mjs";
-import Navigation from "./swiper/modules/navigation.min.mjs";
-import Pagination from "./swiper/modules/pagination.min.mjs";
+import { Swiper } from "./swiper/swiper-bundle.min.mjs";
+// import Swiper from "./swiper/swiper.min.mjs";
+// import Navigation from "./swiper/modules/navigation.min.mjs";
+// import Pagination from "./swiper/modules/pagination.min.mjs";
 
-const lazyModules = [Navigation, Pagination];
+const lazyModules = [];
 
 const sliders = [
   {
@@ -110,7 +111,7 @@ function observeAndInitSwiper({ selector, config }, modules = []) {
   if (!el) return;
 
   const init = () => {
-    new Swiper(selector, { ...config, modules });
+    new Swiper(selector, { ...config });
   };
 
   if ('IntersectionObserver' in window) {

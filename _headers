@@ -1,8 +1,0 @@
-/src/images/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/src/css/*
-  Cache-Control: public, max-age=604800
-
-/src/js/*
-  Cache-Control: public, max-age=604800
