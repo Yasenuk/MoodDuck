@@ -59,14 +59,11 @@
 }
 
 .banner {
-	max-width: 0;
+	max-width: 100%;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	
-	._watched & {
-		max-width: 100%;
-	}
+
 
 	&_center {
 		object-position: center;
