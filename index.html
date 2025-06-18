@@ -14,6 +14,9 @@
 	<meta name="theme-color" content="#000000">
 
 	<link rel="manifest" href="./manifest.json" />
+
+	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/graffiti.webp">
+	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/noise.webp">
 	
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 	<style>
@@ -115,14 +118,11 @@
 		html {
 			scroll-behavior: smooth;
 		}
-
-
 	</style>
 	<link rel="stylesheet" href="./src/styles/css/styles.min.css" />
 
 	<link rel="preload" as="image" href="./src/images/banners/banner.webp" type="image/webp" fetchpriority="high">
 	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/lights/light-hero.webp">
-	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/lights/light-gallery.webp">
 
 	<title>MoodDuck Lab - Преміальні ароматизатори для само­замісу</title>
 </head>
@@ -2457,7 +2457,7 @@
 								<section class="popup-menu__slide swiper-slide">
 									<picture>
 										<source srcset="./src/images/menu/flavours_menu_1.webp" type="image/webp">
-										<img data-image width="995" height="1400" class="popup-menu__image"
+										<img data-image width="995" height="1400" loading="lazy" class="popup-menu__image"
 											src="./src/images/menu/flavours_menu_1.png" alt="Меню сміків" />
 									</picture>
 								</section>
@@ -2465,7 +2465,7 @@
 								<section class="popup-menu__slide swiper-slide">
 									<picture>
 										<source srcset="./src/images/menu/flavours_menu_2.webp" type="image/webp">
-										<img data-image width="995" height="1400" class="popup-menu__image"
+										<img data-image width="995" height="1400" loading="lazy" class="popup-menu__image"
 											src="./src/images/menu/flavours_menu_2.png" alt="Меню сміків" />
 									</picture>
 								</section>

@@ -21,23 +21,11 @@
 		
 		&_noises {
 			.no-webp & {
-				@media (max-width: toRem($maxWidth)){
-					background-image: url(../../images/alternative/noise.png);
-				}
-
-				@media (max-width:$mobile){
-					background-image: url(../../images/alternative/noise-750.png);
-				}
+				background-image: url(../../images/alternative/noise.png);
 			}
 
 			.webp & {
-				@media (max-width: toRem($maxWidth)){
-					background-image: url(../../images/alternative/noise.webp);
-				}
-
-				@media (max-width:$mobile){
-					background-image: url(../../images/alternative/noise-750.webp);
-				}
+				background-image: url(../../images/alternative/noise.webp);
 			}
 
 			opacity: 1;
@@ -45,23 +33,11 @@
 
 		&_graffities {
 			.no-webp & {
-				@media (max-width: toRem($maxWidth)){
-					background-image: url(../../images/alternative/graffiti.png);
-				}
-
-				@media (max-width:$mobile){
-					background-image: url(../../images/alternative/graffiti-750.png);
-				}
+				background-image: url(../../images/alternative/graffiti.png);
 			}
 
 			.webp & {
-				@media (max-width: toRem($maxWidth)){
-					background-image: url(../../images/alternative/graffiti.webp);
-				}
-
-				@media (max-width:$mobile){
-					background-image: url(../../images/alternative/graffiti-750.webp);
-				}
+				background-image: url(../../images/alternative/graffiti.webp);
 			}
 
 			opacity: 0.2;
