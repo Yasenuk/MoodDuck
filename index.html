@@ -119,9 +119,10 @@
 			scroll-behavior: smooth;
 		}
 	</style>
-	<link rel="stylesheet" href="./src/styles/css/styles.min.css" />
+	<link rel="stylesheet" href="./src/styles/css/styles.min.css" media="print" onload="this.media='all'" />
 
-	<link rel="preload" as="image" href="./src/images/banners/banner.webp" type="image/webp" fetchpriority="high">
+	<link rel="preload" as="image" href="./src/images/banners/banner-750.webp" media="(max-width: 768px)" type="image/webp" fetchpriority="high">
+	<link rel="preload" as="image" href="./src/images/banners/banner.webp" media="(min-width: 769px)" type="image/webp" fetchpriority="high">
 	<link rel="preload" as="image" type="image/webp" href="./src/images/alternative/lights/light-hero.webp">
 
 	<title>MoodDuck Lab - Преміальні ароматизатори для само­замісу</title>
@@ -263,7 +264,8 @@
 						<section class="hero__wrapper swiper-wrapper">
 							<section class="hero__slide swiper-slide">
 								<picture>
-									<source srcset="./src/images/banners/banner-750.webp 768w, ./src/images/banners/banner.webp 1335w" type="image/webp" sizes="(max-width: 768px) 768px, 1335px" />
+									<source media="(max-width: 768px)" srcset="./src/images/banners/banner-750.webp" type="image/webp" />
+									<source srcset="./src/images/banners/banner.webp" type="image/webp" />
 									<img
 										width="1335"
 										height="500"
@@ -2471,8 +2473,8 @@
 
 	</section>
 
-	<script type="module" defer src="./src/scripts/libs/sliders.min.js"></script>
 	<script type="module" defer src="./src/scripts/index.min.js"></script>
+	<script type="module" defer src="./src/scripts/libs/sliders.min.js"></script>
 </body>
 
 </html>
