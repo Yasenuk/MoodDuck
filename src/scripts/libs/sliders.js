@@ -1,5 +1,5 @@
 // === SwiperManager.js ===
-import { Swiper } from "./swiper/swiper.min.mjs";
+import Swiper from "./swiper/swiper.min.mjs";
 import Navigation from "./swiper/modules/navigation.min.mjs";
 import Pagination from "./swiper/modules/pagination.min.mjs";
 
